@@ -1,5 +1,80 @@
 {{#docs-viewer as |viewer|}}
   {{#viewer.nav as |nav|}}
+    <LinkTo @route="docs.changelog">Changelog</LinkTo>
+    <li><a href="https://elemefe.github.io/element-react/" target="_blank">Element React</a></li>
+    <li><a href="https://element-angular.faas.ele.me/" target="_blank">Element Angular</a></li>
+
+    {{nav.section "Development"}}
+    {{nav.item "Installation" "docs.installation"}}
+    {{nav.item "Quick Start" "docs.quick-start"}}
+    {{nav.item "Internationalization" "docs.internationalization"}}
+    {{nav.item "Custom Theme" "docs.custom-theme"}}
+    {{nav.item "Built-in transition" "docs.built-in-transition"}}
+    {{nav.item "Dependencies" "docs.dependencies"}}
+
+    {{nav.section "Component"}}
+    <li>Basic</li>
+    {{nav.item "Layout" "docs.layout"}}
+    {{nav.item "Layout Container" "docs.layout-container"}}
+    {{nav.item "Color" "docs.color"}}
+    {{nav.item "Typography" "docs.typography"}}
+    {{nav.item "Border" "docs.border"}}
+    {{nav.item "Icon" "docs.icon"}}
+    {{nav.item "Button" "docs.button"}}
+    {{nav.item "Link" "docs.link"}}
+    <li>Form</li>
+    {{nav.item "Radio" "docs.radio"}}
+    {{nav.item "Checkbox" "docs.checkbox"}}
+    {{nav.item "Input" "docs.input"}}
+    {{nav.item "InputNumber" "docs.input-number"}}
+    {{nav.item "Select" "docs.select"}}
+    {{nav.item "Cascader" "docs.cascader"}}
+    {{nav.item "Switch" "docs.switch"}}
+    {{nav.item "Slider" "docs.slider"}}
+    {{nav.item "TimePicker" "docs.time-picker"}}
+    {{nav.item "DatePicker" "docs.date-picker"}}
+    {{nav.item "DateTimePicker" "docs.date-time-picker"}}
+    {{nav.item "Upload" "docs.upload"}}
+    {{nav.item "Rate" "docs.rate"}}
+    {{nav.item "ColorPicker" "docs.color-picker"}}
+    {{nav.item "Transfer" "docs.transfer"}}
+    {{nav.item "Form" "docs.form"}}
+    <li>Data</li>
+    {{nav.item "Table" "docs.table"}}
+    {{nav.item "Tag" "docs.tag"}}
+    {{nav.item "Progress" "docs.progress"}}
+    {{nav.item "Tree" "docs.tree"}}
+    {{nav.item "Pagination" "docs.pagination"}}
+    {{nav.item "Badge" "docs.badge"}}
+    <li>Notice</li>
+    {{nav.item "Alert" "docs.alert"}}
+    {{nav.item "Loading" "docs.loading"}}
+    {{nav.item "Message" "docs.message"}}
+    {{nav.item "MessageBox" "docs.message-box"}}
+    {{nav.item "Notification" "docs.notification"}}
+    <li>Navigation</li>
+    {{nav.item "NavMenu" "docs.nav-menu"}}
+    {{nav.item "Tabs" "docs.tabs"}}
+    {{nav.item "Breadcrumb" "docs.breadcrumb"}}
+    {{nav.item "PageHeader" "docs.page-header"}}
+    {{nav.item "Dropdown" "docs.dropdown"}}
+    {{nav.item "Steps" "docs.steps"}}
+    <li>Others</li>
+    {{nav.item "Dialog" "docs.dialog"}}
+    {{nav.item "Tooltip" "docs.tooltip"}}
+    {{nav.item "Popover" "docs.popover"}}
+    {{nav.item "Popconfirm" "docs.popconfirm"}}
+    {{nav.item "Card" "docs.card"}}
+    {{nav.item "Carousel" "docs.carousel"}}
+    {{nav.item "Collapse" "docs.collapse"}}
+    {{nav.item "Timeline" "docs.timeline"}}
+    {{nav.item "Divider" "docs.divider"}}
+    {{nav.item "Calendar" "docs.calendar"}}
+    {{nav.item "Image" "docs.image"}}
+    {{nav.item "Backtop" "docs.backtop"}}
+    {{nav.item "InfiniteScroll" "docs.infinite-scroll"}}
+    {{nav.item "Avatar" "docs.avatar"}}
+    {{nav.item "Drawer" "docs.drawer"}}
   {{/viewer.nav}}
 
   {{#viewer.main}}

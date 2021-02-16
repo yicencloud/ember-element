@@ -1,0 +1,13 @@
+{{#if this.hasGutter}}
+  <div
+    class={{this.classes}}
+    style={{this.gutterStyle}}
+    ...attributes
+  >
+    {{yield (hash col=(component "el-col" gutter=this.gutter))}}
+  </div>
+{{else}}
+  <div class={{this.classes}} ...attributes>
+    {{yield (hash col=(component "el-col" gutter=this.gutter))}}
+  </div>
+{{/if}}

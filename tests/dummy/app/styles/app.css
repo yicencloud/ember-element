@@ -1,5 +1,6 @@
 @import 'ember-element.css';
 @import './layout.css';
+@import './container.css';
 
 :root {
   --brand-primary: #409eff;

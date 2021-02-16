@@ -8,7 +8,7 @@
   "homepage": "https://yicencloud.github.io/ember-element",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yicencloud/ember-elemment.git"
+    "url": "git+https://github.com/yicencloud/ember-element.git"
   },
   "license": "MIT",
   "author": "",
@@ -27,6 +27,7 @@
     "test:ember-compatibility": "ember try:each"
   },
   "dependencies": {
+    "element-ui": "^2.15.0",
     "ember-cli-babel": "^7.21.0",
     "ember-cli-htmlbars": "^5.2.0"
   },

@@ -1,21 +1,16 @@
 # Icon
 
 Element provides a set of common icons.
-
-## TODO
-
-* [ ] Add search button with an icon
-
 ## Basic usage
 
-Just assign the class name to el-icon-iconName.
-
+Just assign the `icon` attribute without `el-icon-` prefix.
 
 {{#docs-demo as |demo|}}
     {{#demo.example name="el-basic-usage-demo.hbs" class="demo-icon"}}
         <ElIcon @icon="edit" />
         <ElIcon @icon="share" />
         <ElIcon @icon="delete" />
+        <ElButton @type="primary" @icon="search">Search</ElButton>
     {{/demo.example}}
 
     {{demo.snippet "el-basic-usage-demo.hbs"}}

@@ -4,14 +4,44 @@ import { gt } from "@ember/object/computed";
 
 /**
  * Element layout component, used to create columns.
+ * 
+ * @argument {number} gutter  grid spacing, the `gutter` attribute should be assigned by `<ElRow>`
+ * @argument {number} span    number of column the grid spans
+ * @argument {number} offset  number of spacing on the left side of the grid
+ * @argument {number} push    number of columns that grid moves to the right
+ * @argument {number} pull    number of columns that grid moves to the left
+ * @argument {number | object} xs `<768px` Responsive columns or column props object,
+ *           `object` should like ` {span: 4, offset: 4}`
+ * @argument {number | object} sm `≥768px` Responsive columns or column props object,
+ *           `object` should like ` {span: 4, offset: 4}`
+ * @argument {number | object} md `≥992px` Responsive columns or column props object
+ *           `object` should like ` {span: 4, offset: 4}`
+ * @argument {number | object} lg `≥1200px` Responsive columns or column props object,
+ *           `object` should like ` {span: 4, offset: 4}`
+ * @argument {number | object} xl `≥1920px` Responsive columns or column props object,
+ *           `object` should like ` {span: 4, offset: 4}`
+ * @argument {string} tag custom element tag
  *
  * @author Tower He (towerhe@gmail.com)
  */
 export default class ElColComponent extends Component {
   /**
+   * grid spacing, set by `el-row` component
+   *
+   * @property gutter
+   * @type number
+   * @default 0
+   * @public
+   */
+  get gutter() {
+    return this.args.gutter ?? 0;
+  }
+  /**
    * number of column the grid spans
    *
+   * @property span
    * @type number
+   * @default 24
    * @public
    */
   get span() {
@@ -20,7 +50,9 @@ export default class ElColComponent extends Component {
   /**
    * number of spacing on the left side of the grid
    *
+   * @property offset
    * @type number
+   * @default 0
    * @public
    */
   get offset() {
@@ -29,7 +61,9 @@ export default class ElColComponent extends Component {
   /**
    * number of columns that grid moves to the right
    *
+   * @property push
    * @type number
+   * @default 0
    * @public
    */
   get push() {
@@ -38,15 +72,18 @@ export default class ElColComponent extends Component {
   /**
    * number of columns that grid moves to the right
    *
+   * @property pull
    * @type number
+   * @default 0
    * @public
    */
   get pull() {
     return this.args.pull ?? 0;
   }
   /**
-   * <768px Responsive columns or column props object
+   * `<768px` Responsive columns or column props object
    *
+   * @property xs
    * @type number/object (e.g. {span: 4, offset: 4})
    * @public
    */
@@ -54,8 +91,9 @@ export default class ElColComponent extends Component {
     return this.args.xs ?? null;
   }
   /**
-   * ≥768px Responsive columns or column props object
+   * `≥768px` Responsive columns or column props object
    *
+   * @property sm
    * @type number/object (e.g. {span: 4, offset: 4})
    * @public
    */
@@ -63,8 +101,9 @@ export default class ElColComponent extends Component {
     return this.args.sm ?? null;
   }
   /**
-   * ≥992px Responsive columns or column props object
+   * `≥992px` Responsive columns or column props object
    *
+   * @property md
    * @type number/object (e.g. {span: 4, offset: 4})
    * @public
    */
@@ -72,8 +111,9 @@ export default class ElColComponent extends Component {
     return this.args.md ?? null;
   }
   /**
-   * ≥1200px Responsive columns or column props object
+   * `≥1200px` Responsive columns or column props object
    *
+   * @property lg
    * @type number/object (e.g. {span: 4, offset: 4})
    * @public
    */
@@ -81,8 +121,9 @@ export default class ElColComponent extends Component {
     return this.args.lg ?? null;
   }
   /**
-   * ≥1920px Responsive columns or column props object
+   * `≥1920px` Responsive columns or column props object
    *
+   * @property xl
    * @type number/object (e.g. {span: 4, offset: 4})
    * @public
    */
@@ -90,59 +131,56 @@ export default class ElColComponent extends Component {
     return this.args.xl ?? null;
   }
   /**
+   * [TODO] implement it!
    * custom element tag
    *
+   * @property tag
    * @type string
+   * @default "div"
    * @public
-   * @unused
    */
   get tag() {
     return this.args.tag ?? "div";
   }
   /**
-   * grid spacing, set by `el-row` component
-   *
-   * @type number
-   * @public
-   */
-  get gutter() {
-    return this.args.gutter ?? 0;
-  }
-  /**
    * whether `gutter` is set or not
    *
+   * @property hasGutter
    * @type boolean
+   * @default false
    * @public
    */
   @gt("gutter", 0) hasGutter;
   /**
    * calculate the `class` attribute of the component
    * 
+   * @property classNames
    * @type string
    * @public
    */
   @computed("span", "offset", "push", "pull", "_isResponsiable")
-  get classes() {
-    let classes = `el-col el-col-${this.span} `;
+  get classNames() {
+    let names = `el-col el-col-${this.span} `;
 
     if (this.offset > 0) {
-      classes += `el-col-offset-${this.offset} `;
+      names += `el-col-offset-${this.offset} `;
     }
     if (this.push > 0) {
-      classes += `el-col-push-${this.push} `;
+      names += `el-col-push-${this.push} `;
     }
     if (this.pull > 0) {
-      classes += `el-col-pull-${this.pull} `;
+      names += `el-col-pull-${this.pull} `;
     }
     if (this._isResponsible) {
-      classes += this._responsiveClasses;
+      names += this._responsiveClassNames;
     }
 
-    return classes;
+    return names;
   }
   /**
    * padding styles based on `gutter`
    * 
+   * @property gutterStyle
    * @type string
    * @public
    */
@@ -174,26 +212,26 @@ export default class ElColComponent extends Component {
    * @type string
    * @private
    */
-  get _responsiveClasses() {
-    let classes = "";
+  get _responsiveClassNames() {
+    let names = "";
 
     if (this.xs > 0) {
-      classes = `el-col-xs-${this.xs}`;
+      names = `el-col-xs-${this.xs}`;
     }
     if (this.sm > 0) {
-      classes = `${classes} el-col-sm-${this.sm}`;
+      names = `${names} el-col-sm-${this.sm}`;
     }
     if (this.md > 0) {
-      classes = `${classes} el-col-md-${this.md}`;
+      names = `${names} el-col-md-${this.md}`;
     }
     if (this.lg > 0) {
-      classes = `${classes} el-col-lg-${this.lg}`;
+      names = `${names} el-col-lg-${this.lg}`;
     }
     if (this.xl > 0) {
-      classes = `${classes} el-col-xl-${this.xl}`;
+      names = `${names} el-col-xl-${this.xl}`;
     }
 
-    return classes;
+    return names;
   }
 
 }

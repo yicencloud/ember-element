@@ -75,26 +75,26 @@ Container components for scaffolding basic structure of the page:
 
 ## Example
 
-## Container Attributes
+## Container Arguments
 
-| Attribute | Description                         | Type   | Accepted Values       | Default                                                                |
+| Argument  | Description                         | Type   | Accepted Values       | Default                                                                |
 | --------- | ----------------------------------- | ------ | --------------------- | ---------------------------------------------------------------------- |
 | direction | layout direction for child elements | string | horizontal / vertical | vertical when nested with el-header or el-footer; horizontal otherwise |
 
-## Header Attributes
+## Header Arguments
 
-| Attribute | Description          | Type   | Accepted Values | Default |
+| Argument  | Description          | Type   | Accepted Values | Default |
 | --------- | -------------------- | ------ | --------------- | ------- |
 | height    | height of the header | string | —               | 60px    |
 
-## Aside Attributes
+## Aside Arguments
 
-| Attribute | Description               | Type   | Accepted Values | Default |
+| Argument  | Description               | Type   | Accepted Values | Default |
 | --------- | ------------------------- | ------ | --------------- | ------- |
 | width     | width of the side section | string | —               | 300px   |
 
-## Footer Attributes
+## Footer Arguments
 
-| Attribute | Description          | Type   | Accepted Values | Default |
+| Argument  | Description          | Type   | Accepted Values | Default |
 | --------- | -------------------- | ------ | --------------- | ------- |
 | height    | height of the footer | string | —               | 60px    |

@@ -1,6 +1,6 @@
 {{#if this.hasGutter}}
   <div
-    class={{this.classes}}
+    class={{this.classNames}}
     style={{this.gutterStyle}}
     ...attributes
   >
@@ -8,7 +8,7 @@
   </div>
 {{else}}
   <div
-    class={{this.classes}}
+    class={{this.classNames}}
     ...attributes
   >
     {{yield}}

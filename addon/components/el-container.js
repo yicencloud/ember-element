@@ -2,6 +2,14 @@ import Component from "@ember/component";
 import { tracked } from "@glimmer/tracking";
 import { computed } from "@ember/object";
 
+/**
+ * @argument {string} direction layout direction for child elements, 
+ *                              accepted values: horizontal / vertical, 
+ *                              default value: vertical when nested with
+ *                              el-header or el-footer; horizontal otherwise.
+ * 
+ * @author Tower He (towerhe@gmail.com)
+ */
 export default class ElContainerComponent extends Component {
   tagName = "section";
 
@@ -11,9 +19,10 @@ export default class ElContainerComponent extends Component {
 
   /**
    * layout direction for child elements
-   * 
+   *
    * accepted values: horizontal / vertical
-   * 
+   *
+   * @property direction
    * @default vertical when nested with el-header or el-footer; horizontal otherwise
    * @type string
    * @public
@@ -25,10 +34,7 @@ export default class ElContainerComponent extends Component {
     let foundElements = false;
     for (let i = 0; i < children.length; i++) {
       let c = children[i];
-      if (
-        c.localName === "header" ||
-        c.localName === "footer"
-      ) {
+      if (c.localName === "header" || c.localName === "footer") {
         foundElements = true;
         break;
       }

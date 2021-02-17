@@ -1,0 +1,9 @@
+<a href={{@href}}
+   class="el-link el-link--{{this.type}} {{if this.underline "is-underline"}} {{if this.disabled "is-disabled"}}" 
+   ...attributes
+>
+  {{#if @icon}}
+    <ElIcon @icon={{@icon}} />
+  {{/if}}
+  <span class="el-link--inner">{{yield}}</span>
+</a>

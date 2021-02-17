@@ -1,6 +1,5 @@
 import Component from "@glimmer/component";
 import { computed } from "@ember/object";
-import { gt } from "@ember/object/computed";
 
 /**
  * Element layout component, used to create columns.
@@ -143,15 +142,6 @@ export default class ElColComponent extends Component {
     return this.args.tag ?? "div";
   }
   /**
-   * whether `gutter` is set or not
-   *
-   * @property hasGutter
-   * @type boolean
-   * @default false
-   * @public
-   */
-  @gt("gutter", 0) hasGutter;
-  /**
    * calculate the `class` attribute of the component
    * 
    * @property classNames
@@ -186,13 +176,13 @@ export default class ElColComponent extends Component {
    */
   @computed("gutter")
   get gutterStyle() {
-    if (!this.hasGutter) {
+    if (this.gutter <= 0) {
       return null;
     }
 
     let halfGutter = this.gutter / 2;
 
-    return `padding-left: ${halfGutter}}px; padding-right: ${halfGutter}px`;
+    return `padding-left: ${halfGutter}px; padding-right: ${halfGutter}px`;
   }
   /**
    * whether the responsive attributes changed or not

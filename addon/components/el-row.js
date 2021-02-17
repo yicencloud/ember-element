@@ -1,7 +1,6 @@
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
 import { computed } from "@ember/object";
-import { gt } from "@ember/object/computed";
 
 /**
  * Element layout component, used to create rows.
@@ -71,15 +70,6 @@ export default class ElRowComponent extends Component {
     return this.args.tag ?? "div";
   }
   /**
-   * whether `gutter` is set or not
-   * 
-   * @property hasGutter
-   * @type boolean
-   * @default false
-   * @public
-   */
-  @gt("gutter", 0) hasGutter;
-  /**
    * margin styles based on `gutter`
    * 
    * @property gutterStyle
@@ -88,13 +78,13 @@ export default class ElRowComponent extends Component {
    */
   @computed("gutter")
   get gutterStyle() {
-    if (!this.hasGutter) {
+    if (this.gutter <= 0) {
       return null;
     }
 
     let halfGutter = this.gutter / 2;
 
-    return `margin-left: ${halfGutter}}px; margin-right: ${halfGutter}px`;
+    return `margin-left: ${halfGutter}px; margin-right: ${halfGutter}px`;
   }
   /**
    * calculate the `class` attribute
@@ -103,14 +93,12 @@ export default class ElRowComponent extends Component {
    * @type string
    * @public
    */
-  @computed("type", "justify")
+  @computed("justify")
   get classNames() {
     let names = "el-row ";
 
-    if (this.type == "flex") {
-      if (this.justify) {
-        names += `is-justify-${this.justify} el-row--flex`;
-      }
+    if (this.args.type == "flex") {
+      names += `is-justify-${this.justify} el-row--flex`;
     }
 
     return names;

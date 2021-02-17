@@ -1,0 +1,4 @@
+/* override styles imported from vender.css */
+button:focus {
+  outline: none !important;
+}

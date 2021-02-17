@@ -102,7 +102,7 @@ Use icons to add more meaning to Button. You can use icon alone to save some spa
         <ElButton @type="primary" @icon="delete" />
         <ElButton @type="primary" @icon="search">Search</ElButton>
         <ElButton @type="primary">
-            Upload <ElIcon @icon="upload" class="el-icon-right" />
+            Upload<ElIcon @icon="upload" class="el-icon--right" />
         </ElButton>
     {{/demo.example}}
 
@@ -122,7 +122,7 @@ Displayed as a button group, can be used to group a series of similar operations
         <ElButtonGroup>
             <ElButton @type="primary" @icon="arrow-left">Previous Page</ElButton>
             <ElButton @type="primary">
-                Next Page <ElIcon @icon="arrow-right" class="el-icon-right" />
+                Next Page<ElIcon @icon="arrow-right" class="el-icon--right" />
             </ElButton>
         </ElButtonGroup>
         <ElButtonGroup>

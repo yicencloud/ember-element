@@ -6,3 +6,16 @@
 :root {
   --brand-primary: #409eff;
 }
+
+.demo-block .description {
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #666;
+  word-break: break-word;
+  margin: 10px;
+  background-color: #fff;
+}

@@ -1,0 +1,15 @@
+<button
+    disabled={{@disabled}}
+    type={{this.nativeType}}
+    class="el-button el-button--{{this.type}} {{if @size (concat "el-button--" @size)}} {{if @plain "is-plain"}} {{if @round "is-round"}} {{if @circle "is-circle"}} {{if @disabled "is-disabled"}} {{if @loading "is-loading"}}"
+    ...attributes
+    >
+    {{#if this.icon}}
+        <ElIcon @icon={{this.icon}} />
+    {{/if}}
+    {{#if (has-block)}}
+        <span>
+            {{yield}}
+        </span>
+    {{/if}}
+</button>

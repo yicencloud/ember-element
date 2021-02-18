@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 -->
+
 # Button
 
 Commonly used button.

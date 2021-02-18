@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 -->
+
 # Link
 
 ## Basic

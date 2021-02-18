@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 -->
+
 # Icon
 
 Element provides a set of common icons.

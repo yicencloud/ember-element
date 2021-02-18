@@ -1,33 +1,96 @@
 import Component from "@glimmer/component";
 import { action } from "@ember/object";
+import argument from "../decorators/argument";
 
 /**
  * Single selection among multiple options.
- * 
- * @argument {string | number | boolean} value binding value
- * @argument {string | number | boolean} label the value of Radio
- * @argument {boolean} disabled whether Radio is disabled
- * @argument {boolean} border whether to add a border around Radio
- * @argument {string} size size of the Radio, only works when `border` is true
- * @argument {string} name native 'name' attribute
- * 
- * @event onClick triggers when the bound value changes
- *                @param value the label value of the chosen radio
+ *
+ * @author Tower He (towerhe@gmail.com)
  */
 export default class ElRadioComponent extends Component {
   /**
+   * binding value
+   *
+   * @property value
+   * @type {string | number | boolean}
+   * @public
+   */
+  @argument
+  value = null;
+
+  /**
+   * the value of Radio
+   *
+   * @property label
+   * @type {string | number | boolean}
+   * @public
+   */
+  @argument
+  label = null;
+
+  /**
+   * whether Radio is disabled
+   *
+   * @property disabled
+   * @type {boolean}
+   * @default false
+   * @public
+   */
+  @argument
+  disabled = false;
+
+  /**
+   * whether to add a border around Radio
+   *
+   * @property border
+   * @type {boolean}
+   * @default false
+   * @public
+   */
+  @argument
+  border = false;
+
+  /**
+   * size of the Radio, only works when `border` is true
+   *
+   * **accepted values**: medium / small / mini
+   *
+   * @property size
+   * @type {string}
+   * @public
+   */
+  @argument
+  size = null;
+
+  /**
+   * native 'name' attribute
+   *
+   * @property value
+   * @type {string}
+   * @public
+   */
+  @argument
+  name = null;
+
+  /**
    * whether the passed `value` equals to `label`
-   * 
+   *
    * @property checked
-   * @type boolean
+   * @type {boolean}
    * @public
    */
   get checked() {
-    return this.args.value == this.args.label;
+    return this.args.value === this.args.label;
   }
+
   /**
-   * @method handleClick
+   * when clicking the radio this action is called with the value of the radio.
+   *
+   * @event onClick
+   * @param {string | number | boolean} value
+   * @public
    */
+
   @action
   handleClick() {
     if (this.args.onClick === undefined) {

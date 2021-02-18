@@ -6,8 +6,8 @@
 
 Basic text link
 
-{{#docs-demo as |demo|}}
-    {{#demo.example name="basic-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="link-basic-demo.hbs">
         <div>
             <ElLink @href="https://element.eleme.io" target="_blank">default</ElLink>
             <ElLink @type="primary">primary</ElLink>
@@ -16,17 +16,16 @@ Basic text link
             <ElLink @type="danger">danger</ElLink>
             <ElLink @type="info">info</ElLink>
         </div>
-    {{/demo.example}}
-
-    {{demo.snippet "basic-demo.hbs"}}
-{{/docs-demo}}
+    </demo.example>
+    <demo.snippet @name="link-basic-demo.hbs" />
+</DocsDemo>
 
 ## Disabled
 
 Disabled state of link
 
-{{#docs-demo as |demo|}}
-    {{#demo.example name="disabled-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="link-disabled-demo.hbs">
         <div>
             <ElLink @disabled={{true}}>default</ElLink>
             <ElLink @type="primary" @disabled={{true}}>primary</ElLink>
@@ -35,40 +34,37 @@ Disabled state of link
             <ElLink @type="danger" @disabled={{true}}>danger</ElLink>
             <ElLink @type="info" @disabled={{true}}>info</ElLink>
         </div>
-    {{/demo.example}}
-
-    {{demo.snippet "disabled-demo.hbs"}}
-{{/docs-demo}}
+    </demo.example>
+    <demo.snippet @name="link-disabled-demo.hbs" />
+</DocsDemo>
 
 ## Underline
 
 Underline of link
 
-{{#docs-demo as |demo|}}
-    {{#demo.example name="underline-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="link-underline-demo.hbs">
         <div>
             <ElLink @underline={{false}}>Without Underline</ElLink>
             <ElLink>With Underline</ElLink>
         </div>
-    {{/demo.example}}
-
-    {{demo.snippet "underline-demo.hbs"}}
-{{/docs-demo}}
+    </demo.example>
+    <demo.snippet @name="link-underline-demo.hbs" />
+</DocsDemo>
 
 ## Icon
 
 Link with icon
 
-{{#docs-demo as |demo|}}
-    {{#demo.example name="icon-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="icon-link-demo.hbs">
         <div>
             <ElLink @icon="edit">Edit</ElLink>
             <ElLink>Check<ElIcon @icon="view" class="el-icon--right" /></ElLink>
         </div>
-    {{/demo.example}}
-
-    {{demo.snippet "icon-demo.hbs"}}
-{{/docs-demo}}
+    </demo.example>
+    <demo.snippet @name="icon-link-demo.hbs" />
+</DocsDemo>
 
 ## Arguments
 

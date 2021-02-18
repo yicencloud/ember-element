@@ -22,8 +22,8 @@ Container components for scaffolding basic structure of the page:
 
 ## Common layouts
 
-{{#docs-demo as |demo|}}
-    {{#demo.example name="el-common-layouts-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="container-common-layouts-demo.hbs">
         <ElContainer>
             <ElHeader>Header</ElHeader>
             <ElMain>Main</ElMain>
@@ -69,13 +69,13 @@ Container components for scaffolding basic structure of the page:
                 <ElFooter>Footer</ElFooter>
             </ElContainer>
         </ElContainer>
-    {{/demo.example}}
-
-    {{demo.snippet "el-common-layouts-demo.hbs"}}
-
-{{/docs-demo}}
+    </demo.example>
+    <demo.snippet @name="container-common-layouts-demo.hbs" />
+</DocsDemo>
 
 ## Example
+
+[TODO]
 
 ## Container Arguments
 

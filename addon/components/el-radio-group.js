@@ -1,46 +1,79 @@
 import Component from "@glimmer/component";
 import { action } from "@ember/object";
+import argument from "../decorators/argument";
 
 /**
  * Radio group wrapper.
- * 
- * @argument {string | number | boolean} value binding value
- * @argument {string} size the size of radio buttons or bordered radios
- *           accepted values: medium / small / mini
- * @argument {boolean} disabled whether the nesting radios are disabled
- * @argument {string} textColor font color of the radio
- * @argument {string} fill border and background color of the radio
- * 
- * @event onChange triggers when the bound value changes
- *                 @param the label value of the chosen radio
+ *
+ * @author Tower He (towerhe@gmail.com)
  */
 export default class ElRadioGroupComponent extends Component {
   /**
+   * binding value
+   *
+   * @property value
+   * @type {string | number | boolean}
+   * @public
+   */
+  @argument
+  value = null;
+
+  /**
+   * the size of radio buttons or bordered radios
+   *
+   * **accepted values**: medium / small / mini
+   *
+   * @property size
+   * @type {string}
+   * @public
+   */
+  @argument
+  size = null;
+
+  /**
+   * whether the nesting radios are disabled
+   *
+   * @property disabled
+   * @type {boolean}
+   * @default false
+   * @public
+   */
+  @argument
+  disabled = false;
+
+  /**
    * font color of the checked radio
-   * 
+   *
    * @property textColor
-   * @type string
+   * @type {string}
    * @default "#ffffff"
    * @public
    */
-  get textColor() {
-    return this.args.textColor ?? "#ffffff";
-  }
+  @argument
+  textColor = "#ffffff";
+
   /**
    * border and background color of the checked radio
-   * 
+   *
    * @property fill
-   * @type string
+   * @type {string}
    * @default "#409EFF"
    * @public
    */
-  get fill() {
-    return this.args.fill ?? "#409EFF";
-  }
+  @argument
+  fill = "#409EFF";
+
+  /**
+   * when clicking the nested radio this action is called with the value of the radio.
+   *
+   * @event onChange
+   * @param {string | number | boolean} value
+   * @public
+   */
 
   /**
    * @method updateValue
-   * @param {*} value the value of the chosen radio
+   * @param {string | number | boolean} value the value of the chosen radio
    */
   @action
   updateValue(value) {

@@ -1,44 +1,116 @@
 import Component from "@glimmer/component";
+import argument from "../decorators/argument";
 
 /**
  * Commonly used button.
- *
- * @argument {string} size button size, accepted values: medium / small / mini
- * @argument {string} type button type, accepted values: primary / success / warning / danger / info / text
- * @argument {boolean} plain determine whether it's a plain button
- * @argument {boolean} round determine whether it's a round button
- * @argument {boolean} circle determine whether it's a circle button
- * @argument {boolean} loading determine whether it's loading
- * @argument {boolean} disabled disable the button
- * @argument {string} icon icon class name
- * @argument {boolean} autofocus same as native button's `autofocus`
- * @argument {string} nativeType same as native button's type, accepted values: button / submit / reset
  *
  * @author Tower He (towerhe@gmail.com)
  */
 export default class ElButtonComponent extends Component {
   /**
-   * button type
+   * button size
    *
-   * @property type
-   * @type string
+   * **accepted values**: medium / small / mini
+   *
+   * @property size
+   * @type {string}
    * @public
    */
-  get type() {
-    return this.args.type ?? "default";
-  }
+  @argument
+  size = null;
+
+  /**
+   * button type
+   *
+   * **accepted values**: primary / success / warning / danger / info / text
+   *
+   * @property type
+   * @type {string}
+   * @default "default"
+   * @public
+   */
+  @argument
+  type = "default";
+
+  /**
+   * determine whether it's a plain button
+   *
+   * @property plain
+   * @type {boolean}
+   * @default false
+   * @public
+   */
+  @argument
+  plain = false;
+
+  /**
+   * determine whether it's a round button
+   *
+   * @property round
+   * @type {boolean}
+   * @default false
+   * @public
+   */
+  @argument
+  round = false;
+
+  /**
+   * determine whether it's a circle button
+   *
+   * @property circle
+   * @type {boolean}
+   * @default false
+   * @public
+   */
+  @argument
+  circle = false;
+
+  /**
+   * determine whether it's loading
+   *
+   * @property loading
+   * @type {boolean}
+   * @default false
+   * @public
+   */
+  @argument
+  loading = false;
+
+  /**
+   * disable the button
+   *
+   * @property disabled
+   * @type {boolean}
+   * @default false
+   * @public
+   */
+  @argument
+  disabled = false;
+
+  /**
+   * same as native button's `autofocus`
+   *
+   * @property autofocus
+   * @type {boolean}
+   * @default false
+   * @public
+   */
+  @argument
+  autofocus = false;
+
   /**
    * same as native button's type
    *
-   * accepted values: button / submit / reset
+   * **accepted values**: button / submit / reset
    *
    * @property nativeType
-   * @type string
+   * @type {string}
+   * @default "button"
    * @public
    */
-  get nativeType() {
-    return this.args.nativeType ?? "button";
-  }
+  @argument
+  nativeType = "button";
+
   /**
    * icon class name
    *

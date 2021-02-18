@@ -8,17 +8,15 @@ Element provides a set of common icons.
 
 Just assign the `icon` attribute without `el-icon-` prefix.
 
-{{#docs-demo as |demo|}}
-    {{#demo.example name="el-basic-usage-demo.hbs" class="demo-icon"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="icon-basic-usage-demo.hbs" @class="demo-icon">
         <ElIcon @icon="edit" />
         <ElIcon @icon="share" />
         <ElIcon @icon="delete" />
         <ElButton @type="primary" @icon="search">Search</ElButton>
-    {{/demo.example}}
-
-    {{demo.snippet "el-basic-usage-demo.hbs"}}
-
-{{/docs-demo}}
+    </demo.example>
+    <demo.snippet @name="icon-basic-usage-demo.hbs" />
+</DocsDemo>
 
 ## Icons
 

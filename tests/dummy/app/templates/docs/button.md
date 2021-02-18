@@ -6,8 +6,8 @@ Commonly used button.
 
 ## Basic usage
 
-{{#docs-demo class="demo-block" as |demo|}}
-    {{#demo.example name="button-basic-usage-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="button-basic-usage-demo.hbs">
         <ElRow>
             <ElButton>Default</ElButton>
             <ElButton @type="primary">Primary</ElButton>
@@ -40,21 +40,19 @@ Commonly used button.
             <ElButton @type="warning" @icon="star-off" @circle={{true}} />
             <ElButton @type="danger" @icon="delete" @circle={{true}} />
         </ElRow>
-    {{/demo.example}}
-
+    </demo.example>
     <div class="description">
         Use `type`, `plain`, `round` and `circle` to define Button's style.
     </div>
-
-    {{demo.snippet "button-basic-usage-demo.hbs"}}
-{{/docs-demo}}
+    <demo.snippet @name="button-basic-usage-demo.hbs" />
+</DocsDemo>
 
 ## Disabled Button
 
 The `disabled` attribute determines if the button is disabled.
 
-{{#docs-demo class="demo-block" as |demo|}}
-    {{#demo.example name="disabled-button-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="button-disabled-button-demo.hbs">
         <ElRow>
             <ElButton @disabled={{true}}>Default</ElButton>
             <ElButton @type="primary" @disabled={{true}}>Primary</ElButton>
@@ -71,34 +69,31 @@ The `disabled` attribute determines if the button is disabled.
             <ElButton @type="warning" @plain={{true}} @disabled={{true}}>Warning</ElButton>
             <ElButton @type="danger" @plain={{true}} @disabled={{true}}>Danger</ElButton>
         </ElRow>
-    {{/demo.example}}
-
+    </demo.example>
     <div class="description">
         Use `disabled` attribute to determine whether a button is disabled. It accepts a `Boolean` value.
     </div>
-
-    {{demo.snippet "disabled-button-demo.hbs"}}
-{{/docs-demo}}
+    <demo.snippet @name="button-disabled-button-demo.hbs" />
+</DocsDemo>
 
 ## Text Button
 
 Buttons without border and background.
 
-{{#docs-demo as |demo|}}
-    {{#demo.example name="text-button-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="button-text-button-demo.hbs">
         <ElButton @type="text">Text Button</ElButton>
         <ElButton @type="text" @disabled={{true}}>Text Button</ElButton>
-    {{/demo.example}}
-
-    {{demo.snippet "text-button-demo.hbs"}}
-{{/docs-demo}}
+    </demo.example>
+    <demo.snippet @name="button-text-button-demo.hbs" />
+</DocsDemo>
 
 ## Icon Button
 
 Use icons to add more meaning to Button. You can use icon alone to save some space, or use it with text.
 
-{{#docs-demo class="demo-block" as |demo|}}
-    {{#demo.example name="icon-button-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="button-icon-button-demo.hbs">
         <ElButton @type="primary" @icon="edit" />
         <ElButton @type="primary" @icon="share" />
         <ElButton @type="primary" @icon="delete" />
@@ -106,21 +101,19 @@ Use icons to add more meaning to Button. You can use icon alone to save some spa
         <ElButton @type="primary">
             Upload<ElIcon @icon="upload" class="el-icon--right" />
         </ElButton>
-    {{/demo.example}}
-
+    </demo.example>
     <div class="description">
         Use the `icon` attribute to add icon. You can find the icon list in Element icon component. Adding icons to the right side of the text is achievable with an `<ElIcon>` tag. Custom icons can be used as well.
     </div>
-
-    {{demo.snippet "icon-button-demo.hbs"}}
-{{/docs-demo}}
+    <demo.snippet @name="button-icon-button-demo.hbs" />
+</DocsDemo>
 
 ## Button Group
 
 Displayed as a button group, can be used to group a series of similar operations.
 
-{{#docs-demo class="demo-block" as |demo|}}
-    {{#demo.example name="button-group-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="button-group-demo.hbs">
         <ElButtonGroup>
             <ElButton @type="primary" @icon="arrow-left">Previous Page</ElButton>
             <ElButton @type="primary">
@@ -132,37 +125,33 @@ Displayed as a button group, can be used to group a series of similar operations
             <ElButton @type="primary" @icon="share" />
             <ElButton @type="primary" @icon="delete" />
         </ElButtonGroup>
-    {{/demo.example}}
-
+    </demo.example>
     <div class="description">
         Use tag `<ElButtonGroup>` to group your buttons.
     </div>
-
-    {{demo.snippet "button-group-demo.hbs"}}
-{{/docs-demo}}
+    <demo.snippet @name="button-group-demo.hbs" />
+</DocsDemo>
 
 ## Loading Button
 
 Click the button to load data, then the button displays a loading state.
 
-{{#docs-demo class="demo-block" as |demo|}}
-    {{#demo.example name="loading-button-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="button-loading-button-demo.hbs">
         <ElButton @type="primary" @loading={{true}}>Loading</ElButton>
-    {{/demo.example}}
-
+    </demo.example>
     <div class="description">
         Set `loading` attribute to `true` to display loading state.
     </div>
-
-    {{demo.snippet "loading-button-demo.hbs"}}
-{{/docs-demo}}
+    <demo.snippet @name="button-loading-button-demo.hbs" />
+</DocsDemo>
 
 ## Sizes
 
 Besides default size, Button component provides three additional sizes for you to choose among different scenarios.
 
-{{#docs-demo class="demo-block" as |demo|}}
-    {{#demo.example name="size-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="button-size-demo.hbs">
         <ElRow>
             <ElButton>Default</ElButton>
             <ElButton @size="medium">Medium</ElButton>
@@ -175,14 +164,12 @@ Besides default size, Button component provides three additional sizes for you t
             <ElButton @size="small" @round={{true}}>Small</ElButton>
             <ElButton @size="mini" @round={{true}}>Mini</ElButton>
         </ElRow>
-    {{/demo.example}}
-
+    </demo.example>
     <div class="description">
         Use attribute `size` to set additional sizes with `medium`, `small` or `mini`.
     </div>
-
-    {{demo.snippet "size-demo.hbs"}}
-{{/docs-demo}}
+    <demo.snippet @name="button-size-demo.hbs" />
+</DocsDemo>
 
 ## Arguments
 

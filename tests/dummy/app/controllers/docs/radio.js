@@ -3,7 +3,7 @@ import { tracked } from "@glimmer/tracking";
 import { action } from "@ember/object";
 
 export default class RadioController extends Controller {
-  // BEGIN-SNIPPET basic-usage-demo.js
+  // BEGIN-SNIPPET radio-basic-usage-demo.js
   @tracked radio = "1";
 
   @action
@@ -12,11 +12,11 @@ export default class RadioController extends Controller {
   }
   // END-SNIPPET
 
-  // BEGIN-SNIPPET disabled-demo.js
+  // BEGIN-SNIPPET radio-disabled-demo.js
   @tracked disabledRadio = "selected and disabled";
   // END-SNIPPET
 
-  // BEGIN-SNIPPET button-group-demo.js
+  // BEGIN-SNIPPET radio-button-group-demo.js
   @tracked groupRadio = "3";
 
   @action
@@ -25,7 +25,7 @@ export default class RadioController extends Controller {
   }
   // END-SNIPPET
 
-  // BEGIN-SNIPPET button-styles-demo.js
+  // BEGIN-SNIPPET radio-button-styles-demo.js
   @tracked buttonStylesRadio1 = "New York";
   @tracked buttonStylesRadio2 = "New York";
   @tracked buttonStylesRadio3 = "New York";
@@ -45,7 +45,7 @@ export default class RadioController extends Controller {
   }
   // END-SNIPPET
 
-  // BEGIN-SNIPPET with-borders-demo.js
+  // BEGIN-SNIPPET radio-with-borders-demo.js
   @tracked withBordersRadio1 = "1";
   @tracked withBordersRadio2 = "1";
   @tracked withBordersRadio3 = "1";

@@ -4,7 +4,7 @@
 
 `ember-element` is in pre-early stage, there is a long list needs to be checked.
 
-If you want to take a look what we have done, please visit: [https://yicencloud.github.io/ember-element/versions/master](https://yicencloud.github.io/ember-element/versions/master)
+If you want to take a look at what we have done, please visit: [https://yicencloud.github.io/ember-element/versions/master](https://yicencloud.github.io/ember-element/versions/master)
 
 ## TODO
 

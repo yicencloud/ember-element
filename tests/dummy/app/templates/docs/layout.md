@@ -15,8 +15,8 @@ Quickly and easily create layouts with the basic 24-column.
 
 Create basic grid layout using columns.
 
-{{#docs-demo class="demo-block" as |demo|}}
-    {{#demo.example name="el-basic-layout-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="layout-basic-layout-demo.hbs">
         <ElRow>
             <ElCol @span=24><div class="grid-content bg-purple-dark"></div></ElCol>
             </ElRow>
@@ -43,98 +43,87 @@ Create basic grid layout using columns.
             <ElCol @span=4><div class="grid-content bg-purple"></div></ElCol>
             <ElCol @span=4><div class="grid-content bg-purple-light"></div></ElCol>
         </ElRow>
-    {{/demo.example}}
-
+    </demo.example>
     <div class="description">
         With `row` and `col`, we can easily manipulate the layout using the `span` attribute.
     </div>
-
-    {{demo.snippet "el-basic-layout-demo.hbs"}}
-
-{{/docs-demo}}
+    <demo.snippet @name="layout-basic-layout-demo.hbs" />
+</DocsDemo>
 
 ## Column spacing
 
 Column spacing is supported.
 
-{{#docs-demo class="demo-block" as |demo|}}
-    {{#demo.example name="el-column-spacing-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="layout-column-spacing-demo.hbs">
         <ElRow @gutter=20 as |row|>
-            {{#row.col span=6}}<div class="grid-content bg-purple"></div>{{/row.col}}
-            {{#row.col span=6}}<div class="grid-content bg-purple"></div>{{/row.col}}
-            {{#row.col span=6}}<div class="grid-content bg-purple"></div>{{/row.col}}
-            {{#row.col span=6}}<div class="grid-content bg-purple"></div>{{/row.col}}
+            <row.col @span=6><div class="grid-content bg-purple"></div></row.col>
+            <row.col @span=6><div class="grid-content bg-purple"></div></row.col>
+            <row.col @span=6><div class="grid-content bg-purple"></div></row.col>
+            <row.col @span=6><div class="grid-content bg-purple"></div></row.col>
         </ElRow>
-    {{/demo.example}}
-
+    </demo.example>
     <div class="description">
         Row provides `gutter` attribute to specify spacings between columns, and its default value is 0.
     </div>
-
-    {{demo.snippet "el-column-spacing-demo.hbs"}}
-
-{{/docs-demo}}
+    <demo.snippet @name="layout-column-spacing-demo.hbs" />
+</DocsDemo>
 
 ## Hybrid layout
 
 Form a more complex hybrid layout by combining the basic 1/24 columns.
 
-{{#docs-demo as |demo|}}
-    {{#demo.example name="el-hybrid-layout-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="layout-hybrid-layout-demo.hbs">
         <ElRow @gutter=20 as |row|>
-            {{#row.col span=16}}<div class="grid-content bg-purple"></div>{{/row.col}}
-            {{#row.col span=8}}<div class="grid-content bg-purple"></div>{{/row.col}}
+            <row.col @span=16><div class="grid-content bg-purple"></div></row.col>
+            <row.col @span=8><div class="grid-content bg-purple"></div></row.col>
         </ElRow>
         <ElRow @gutter=20 as |row|>
-            {{#row.col span=8}}<div class="grid-content bg-purple"></div>{{/row.col}}
-            {{#row.col span=8}}<div class="grid-content bg-purple"></div>{{/row.col}}
-            {{#row.col span=4}}<div class="grid-content bg-purple"></div>{{/row.col}}
-            {{#row.col span=4}}<div class="grid-content bg-purple"></div>{{/row.col}}
+            <row.col @span=8><div class="grid-content bg-purple"></div></row.col>
+            <row.col @span=8><div class="grid-content bg-purple"></div></row.col>
+            <row.col @span=4><div class="grid-content bg-purple"></div></row.col>
+            <row.col @span=4><div class="grid-content bg-purple"></div></row.col>
         </ElRow>
         <ElRow @gutter=20 as |row|>
-            {{#row.col span=4}}<div class="grid-content bg-purple"></div>{{/row.col}}
-            {{#row.col span=16}}<div class="grid-content bg-purple"></div>{{/row.col}}
-            {{#row.col span=4}}<div class="grid-content bg-purple"></div>{{/row.col}}
+            <row.col @span=4><div class="grid-content bg-purple"></div></row.col>
+            <row.col @span=16><div class="grid-content bg-purple"></div></row.col>
+            <row.col @span=4><div class="grid-content bg-purple"></div></row.col>
         </ElRow>
-    {{/demo.example}}
-
-    {{demo.snippet "el-hybrid-layout-demo.hbs"}}
-
-{{/docs-demo}}
+    </demo.example>
+    <demo.snippet @name="layout-hybrid-layout-demo.hbs" />
+</DocsDemo>
 
 ## Column offset
 
 You can specify column offsets.
 
-{{#docs-demo class="demo-block" as |demo|}}
-    {{#demo.example name="el-column-offset-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="layout-column-offset-demo.hbs">
         <ElRow @gutter=20 as |row|>
-            {{#row.col span=6}}<div class="grid-content bg-purple"></div>{{/row.col}}
-            {{#row.col span=6 offset=6}}<div class="grid-content bg-purple"></div>{{/row.col}}
+            <row.col @span=6><div class="grid-content bg-purple"></div></row.col>
+            <row.col @span=6 @offset=6><div class="grid-content bg-purple"></div></row.col>
         </ElRow>
         <ElRow @gutter=20 as |row|>
-            {{#row.col span=6 offset=6}}<div class="grid-content bg-purple"></div>{{/row.col}}
-            {{#row.col span=6 offset=6}}<div class="grid-content bg-purple"></div>{{/row.col}}
+            <row.col @span=6 @offset=6><div class="grid-content bg-purple"></div></row.col>
+            <row.col @span=6 @offset=6><div class="grid-content bg-purple"></div></row.col>
         </ElRow>
         <ElRow @gutter=20 as |row|>
-            {{#row.col span=12 offset=6}}<div class="grid-content bg-purple"></div>{{/row.col}}
+            <row.col @span=12 @offset=6><div class="grid-content bg-purple"></div></row.col>
         </ElRow>
-    {{/demo.example}}
-
+    </demo.example>
     <div class="description">
         You can specify the number of column offset by setting the value of `offset` attribute of Col.
     </div>
-
-    {{demo.snippet "el-column-offset-demo.hbs"}}
-
-{{/docs-demo}}
+    <demo.snippet @name="layout-column-offset-demo.hbs" />
+</DocsDemo>
 
 ## Alignment
 
 Use the flex layout to make flexible alignment of columns.
 
-{{#docs-demo class="demo-block" as |demo|}}
-    {{#demo.example name="el-alignment-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="layout-alignment-demo.hbs">
         <ElRow @type="flex" class="row-bg">
             <ElCol @span=6><div class="grid-content bg-purple"></div></ElCol>
             <ElCol @span=6><div class="grid-content bg-purple-light"></div></ElCol>
@@ -160,33 +149,28 @@ Use the flex layout to make flexible alignment of columns.
             <ElCol @span=6><div class="grid-content bg-purple-light"></div></ElCol>
             <ElCol @span=6><div class="grid-content bg-purple"></div></ElCol>
         </ElRow>
-    {{/demo.example}}
-
+    </demo.example>
     <div class="description">
         You can enable flex layout by setting `type` attribute to 'flex', and define the layout of child elements by setting `justify` attribute with start, center, end, space-between or space-around.
     </div>
-
-    {{demo.snippet "el-alignment-demo.hbs"}}
-
-{{/docs-demo}}
+    <demo.snippet @name="layout-alignment-demo.hbs" />
+</DocsDemo>
 
 ## Responsive Layout
 
 Taking example by Bootstrap's responsive design, five breakpoints are preset: xs, sm, md, lg and xl.
 
-{{#docs-demo as |demo|}}
-    {{#demo.example name="el-responsive-layout-demo.hbs"}}
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="layout-responsive-layout-demo.hbs">
         <ElRow @gutter=10 as |row|>
-            {{#row.col xs=8 sm=6 md=4 lg=3 xl=1}}<div class="grid-content bg-purple"></div>{{/row.col}}
-            {{#row.col xs=4 sm=6 md=8 lg=9 xl=11}}<div class="grid-content bg-purple-light"></div>{{/row.col}}
-            {{#row.col xs=4 sm=6 md=8 lg=9 xl=11}}<div class="grid-content bg-purple"></div>{{/row.col}}
-            {{#row.col xs=8 sm=6 md=4 lg=3 xl=1}}<div class="grid-content bg-purple-light"></div>{{/row.col}}
+            <row.col @xs=8 @sm=6 @md=4 @lg=3 @@xl=1><div class="grid-content bg-purple"></div></row.col>
+            <row.col @xs=4 @sm=6 @md=8 @lg=9 @@xl=11><div class="grid-content bg-purple-light"></div></row.col>
+            <row.col @xs=4 @sm=6 @md=8 @lg=9 @@xl=11><div class="grid-content bg-purple"></div></row.col>
+            <row.col @xs=8 @sm=6 @md=4 @lg=3 @@xl=1><div class="grid-content bg-purple-light"></div></row.col>
         </ElRow>
-    {{/demo.example}}
-
-    {{demo.snippet "el-responsive-layout-demo.hbs"}}
-
-{{/docs-demo}}
+    </demo.example>
+    <demo.snippet @name="layout-responsive-layout-demo.hbs" />
+</DocsDemo>
 
 ## Utility classes for hiding elements
 

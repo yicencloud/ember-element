@@ -1,8 +1,7 @@
 import Component from "@glimmer/component";
+import argument from "../decorators/argument";
 
 /**
- * @argument {string} height height of the footer, default `60px`
- * 
  * @author Tower He (towerhe@gmail.com)
  */
 export default class ElFooterComponent extends Component {
@@ -10,11 +9,10 @@ export default class ElFooterComponent extends Component {
    * height of the footer
    *
    * @property height
-   * @default 60px
-   * @type string
+   * @type {string}
+   * @default "60px"
    * @public
    */
-  get height() {
-    return this.args.height ?? "60px";
-  }
+  @argument
+  height = "60px";
 }

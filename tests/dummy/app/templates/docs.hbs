@@ -1,5 +1,5 @@
-{{#docs-viewer as |viewer|}}
-  {{#viewer.nav as |nav|}}
+<DocsViewer as |viewer|>
+  <viewer.nav as |nav|>
     <LinkTo @route="docs.changelog">Changelog</LinkTo>
     <li><a href="https://elemefe.github.io/element-react/" target="_blank">Element React</a></li>
     <li><a href="https://element-angular.faas.ele.me/" target="_blank">Element Angular</a></li>
@@ -87,9 +87,9 @@
     {{nav.item "InfiniteScroll" "docs.infinite-scroll"}}
     {{nav.item "Avatar" "docs.avatar"}}
     {{nav.item "Drawer" "docs.drawer"}}
-  {{/viewer.nav}}
+  </viewer.nav>
 
-  {{#viewer.main}}
+  <viewer.main>
     {{outlet}}
-  {{/viewer.main}}
-{{/docs-viewer}}
+  </viewer.main>
+</DocsViewer>

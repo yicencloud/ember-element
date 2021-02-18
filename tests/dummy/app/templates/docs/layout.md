@@ -56,11 +56,11 @@ Column spacing is supported.
 
 <DocsDemo @class="demo-block" as |demo|>
     <demo.example @name="layout-column-spacing-demo.hbs">
-        <ElRow @gutter=20 as |row|>
-            <row.col @span=6><div class="grid-content bg-purple"></div></row.col>
-            <row.col @span=6><div class="grid-content bg-purple"></div></row.col>
-            <row.col @span=6><div class="grid-content bg-purple"></div></row.col>
-            <row.col @span=6><div class="grid-content bg-purple"></div></row.col>
+        <ElRow @gutter=20 as |Row|>
+            <Row.Col @span=6><div class="grid-content bg-purple"></div></Row.Col>
+            <Row.Col @span=6><div class="grid-content bg-purple"></div></Row.Col>
+            <Row.Col @span=6><div class="grid-content bg-purple"></div></Row.Col>
+            <Row.Col @span=6><div class="grid-content bg-purple"></div></Row.Col>
         </ElRow>
     </demo.example>
     <div class="description">
@@ -75,20 +75,20 @@ Form a more complex hybrid layout by combining the basic 1/24 columns.
 
 <DocsDemo @class="demo-block" as |demo|>
     <demo.example @name="layout-hybrid-layout-demo.hbs">
-        <ElRow @gutter=20 as |row|>
-            <row.col @span=16><div class="grid-content bg-purple"></div></row.col>
-            <row.col @span=8><div class="grid-content bg-purple"></div></row.col>
+        <ElRow @gutter=20 as |Row|>
+            <Row.Col @span=16><div class="grid-content bg-purple"></div></Row.Col>
+            <Row.Col @span=8><div class="grid-content bg-purple"></div></Row.Col>
         </ElRow>
-        <ElRow @gutter=20 as |row|>
-            <row.col @span=8><div class="grid-content bg-purple"></div></row.col>
-            <row.col @span=8><div class="grid-content bg-purple"></div></row.col>
-            <row.col @span=4><div class="grid-content bg-purple"></div></row.col>
-            <row.col @span=4><div class="grid-content bg-purple"></div></row.col>
+        <ElRow @gutter=20 as |Row|>
+            <Row.Col @span=8><div class="grid-content bg-purple"></div></Row.Col>
+            <Row.Col @span=8><div class="grid-content bg-purple"></div></Row.Col>
+            <Row.Col @span=4><div class="grid-content bg-purple"></div></Row.Col>
+            <Row.Col @span=4><div class="grid-content bg-purple"></div></Row.Col>
         </ElRow>
-        <ElRow @gutter=20 as |row|>
-            <row.col @span=4><div class="grid-content bg-purple"></div></row.col>
-            <row.col @span=16><div class="grid-content bg-purple"></div></row.col>
-            <row.col @span=4><div class="grid-content bg-purple"></div></row.col>
+        <ElRow @gutter=20 as |Row|>
+            <Row.Col @span=4><div class="grid-content bg-purple"></div></Row.Col>
+            <Row.Col @span=16><div class="grid-content bg-purple"></div></Row.Col>
+            <Row.Col @span=4><div class="grid-content bg-purple"></div></Row.Col>
         </ElRow>
     </demo.example>
     <demo.snippet @name="layout-hybrid-layout-demo.hbs" />
@@ -100,16 +100,16 @@ You can specify column offsets.
 
 <DocsDemo @class="demo-block" as |demo|>
     <demo.example @name="layout-column-offset-demo.hbs">
-        <ElRow @gutter=20 as |row|>
-            <row.col @span=6><div class="grid-content bg-purple"></div></row.col>
-            <row.col @span=6 @offset=6><div class="grid-content bg-purple"></div></row.col>
+        <ElRow @gutter=20 as |Row|>
+            <Row.Col @span=6><div class="grid-content bg-purple"></div></Row.Col>
+            <Row.Col @span=6 @offset=6><div class="grid-content bg-purple"></div></Row.Col>
         </ElRow>
-        <ElRow @gutter=20 as |row|>
-            <row.col @span=6 @offset=6><div class="grid-content bg-purple"></div></row.col>
-            <row.col @span=6 @offset=6><div class="grid-content bg-purple"></div></row.col>
+        <ElRow @gutter=20 as |Row|>
+            <Row.Col @span=6 @offset=6><div class="grid-content bg-purple"></div></Row.Col>
+            <Row.Col @span=6 @offset=6><div class="grid-content bg-purple"></div></Row.Col>
         </ElRow>
-        <ElRow @gutter=20 as |row|>
-            <row.col @span=12 @offset=6><div class="grid-content bg-purple"></div></row.col>
+        <ElRow @gutter=20 as |Row|>
+            <Row.Col @span=12 @offset=6><div class="grid-content bg-purple"></div></Row.Col>
         </ElRow>
     </demo.example>
     <div class="description">
@@ -162,11 +162,11 @@ Taking example by Bootstrap's responsive design, five breakpoints are preset: xs
 
 <DocsDemo @class="demo-block" as |demo|>
     <demo.example @name="layout-responsive-layout-demo.hbs">
-        <ElRow @gutter=10 as |row|>
-            <row.col @xs=8 @sm=6 @md=4 @lg=3 @@xl=1><div class="grid-content bg-purple"></div></row.col>
-            <row.col @xs=4 @sm=6 @md=8 @lg=9 @@xl=11><div class="grid-content bg-purple-light"></div></row.col>
-            <row.col @xs=4 @sm=6 @md=8 @lg=9 @@xl=11><div class="grid-content bg-purple"></div></row.col>
-            <row.col @xs=8 @sm=6 @md=4 @lg=3 @@xl=1><div class="grid-content bg-purple-light"></div></row.col>
+        <ElRow @gutter=10 as |Row|>
+            <Row.Col @xs=8 @sm=6 @md=4 @lg=3 @@xl=1><div class="grid-content bg-purple"></div></Row.Col>
+            <Row.Col @xs=4 @sm=6 @md=8 @lg=9 @@xl=11><div class="grid-content bg-purple-light"></div></Row.Col>
+            <Row.Col @xs=4 @sm=6 @md=8 @lg=9 @@xl=11><div class="grid-content bg-purple"></div></Row.Col>
+            <Row.Col @xs=8 @sm=6 @md=4 @lg=3 @@xl=1><div class="grid-content bg-purple-light"></div></Row.Col>
         </ElRow>
     </demo.example>
     <demo.snippet @name="layout-responsive-layout-demo.hbs" />

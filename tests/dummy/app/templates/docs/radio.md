@@ -43,10 +43,10 @@ Suitable for choosing from some mutually exclusive options.
 
 <DocsDemo @class="demo-block" as |demo|>
     <demo.example @name="radio-button-group-demo.hbs">
-        <ElRadioGroup @value={{this.groupRadio}} @onChange={{this.changeGroupRadio}} as |group|>
-            <group.radio @label="3">Option A</group.radio>
-            <group.radio @label="6">Option B</group.radio>
-            <group.radio @label="9">Option C</group.radio>
+        <ElRadioGroup @value={{this.groupRadio}} @onChange={{this.changeGroupRadio}} as |Group|>
+            <Group.Radio @label="3">Option A</Group.Radio>
+            <Group.Radio @label="6">Option B</Group.Radio>
+            <Group.Radio @label="9">Option C</Group.Radio>
         </ElRadioGroup>
    </demo.example>
     <div class="description">
@@ -62,34 +62,34 @@ Radio with button styles.
 
 <DocsDemo @class="demo-block" as |demo|>
     <demo.example @name="radio-button-styles-demo.hbs">
-        <ElRadioGroup @value={{this.buttonStylesRadio1}} @onChange={{this.changeButtonStylesRadio1}} @textColor="#F56C6C" @fill="#fbc4c4" as |group|>
-            <group.radioButton @label="New York">New York</group.radioButton>
-            <group.radioButton @label="Washington">Washington</group.radioButton>
-            <group.radioButton @label="Los Angeles">Los Angeles</group.radioButton>
-            <group.radioButton @label="Chicago">Chicago</group.radioButton>
+        <ElRadioGroup @value={{this.buttonStylesRadio1}} @onChange={{this.changeButtonStylesRadio1}} @textColor="#F56C6C" @fill="#fbc4c4" as |Group|>
+            <Group.RadioButton @label="New York">New York</Group.RadioButton>
+            <Group.RadioButton @label="Washington">Washington</Group.RadioButton>
+            <Group.RadioButton @label="Los Angeles">Los Angeles</Group.RadioButton>
+            <Group.RadioButton @label="Chicago">Chicago</Group.RadioButton>
         </ElRadioGroup>
         <div style="margin-top: 20px">
-            <ElRadioGroup @size="medium" @value={{this.buttonStylesRadio2}} @onChange={{this.changeButtonStylesRadio2}} as |group|>
-                <group.radioButton @label="New York">New York</group.radioButton>
-                <group.radioButton @label="Washington">Washington</group.radioButton>
-                <group.radioButton @label="Los Angeles">Los Angeles</group.radioButton>
-                <group.radioButton @label="Chicago">Chicago</group.radioButton>
+            <ElRadioGroup @size="medium" @value={{this.buttonStylesRadio2}} @onChange={{this.changeButtonStylesRadio2}} as |Group|>
+                <Group.RadioButton @label="New York">New York</Group.RadioButton>
+                <Group.RadioButton @label="Washington">Washington</Group.RadioButton>
+                <Group.RadioButton @label="Los Angeles">Los Angeles</Group.RadioButton>
+                <Group.RadioButton @label="Chicago">Chicago</Group.RadioButton>
             </ElRadioGroup>
         </div>
         <div style="margin-top: 20px">
-            <ElRadioGroup @size="small" @value={{this.buttonStylesRadio3}} @onChange={{this.changeButtonStylesRadio3}} as |group|>
-                <group.radioButton @label="New York">New York</group.radioButton>
-                <group.radioButton @label="Washington">Washington</group.radioButton>
-                <group.radioButton @label="Los Angeles">Los Angeles</group.radioButton>
-                <group.radioButton @label="Chicago">Chicago</group.radioButton>
+            <ElRadioGroup @size="small" @value={{this.buttonStylesRadio3}} @onChange={{this.changeButtonStylesRadio3}} as |Group|>
+                <Group.RadioButton @label="New York">New York</Group.RadioButton>
+                <Group.RadioButton @label="Washington">Washington</Group.RadioButton>
+                <Group.RadioButton @label="Los Angeles">Los Angeles</Group.RadioButton>
+                <Group.RadioButton @label="Chicago">Chicago</Group.RadioButton>
             </ElRadioGroup>
         </div>
         <div style="margin-top: 20px">
-            <ElRadioGroup @disabled={{true}} @size="mini" @value={{this.buttonStylesRadio4}} as |group|>
-                <group.radioButton @label="New York">New York</group.radioButton>
-                <group.radioButton @label="Washington">Washington</group.radioButton>
-                <group.radioButton @label="Los Angeles">Los Angeles</group.radioButton>
-                <group.radioButton @label="Chicago">Chicago</group.radioButton>
+            <ElRadioGroup @disabled={{true}} @size="mini" @value={{this.buttonStylesRadio4}} as |Group|>
+                <Group.RadioButton @label="New York">New York</Group.RadioButton>
+                <Group.RadioButton @label="Washington">Washington</Group.RadioButton>
+                <Group.RadioButton @label="Los Angeles">Los Angeles</Group.RadioButton>
+                <Group.RadioButton @label="Chicago">Chicago</Group.RadioButton>
             </ElRadioGroup>
         </div>
    </demo.example>
@@ -113,15 +113,15 @@ Radio with button styles.
             <ElRadio @value={{this.withBordersRadio2}} @label="2" @border={{true}} @size="medium" @onClick={{this.changeWithBordersRadio2}}>Option B</ElRadio>
         </div>
         <div style="margin-top: 20px">
-            <ElRadioGroup @size="small" @value={{this.withBordersRadio3}} as |group|>
-                <group.radio @label="1" @border={{true}}>Option A</group.radio>
-                <group.radio @label="2" @border={{true}} @disabled={{true}}>Option B</group.radio>
+            <ElRadioGroup @size="small" @value={{this.withBordersRadio3}} as |Group|>
+                <Group.Radio @label="1" @border={{true}}>Option A</Group.Radio>
+                <Group.Radio @label="2" @border={{true}} @disabled={{true}}>Option B</Group.Radio>
             </ElRadioGroup>
         </div>
         <div style="margin-top: 20px">
-            <ElRadioGroup @disabled={{true}} @size="mini" @value={{this.withBordersRadio4}} as |group|>
-                <group.radio @label="1" @border={{true}}>Option A</group.radio>
-                <group.radio @label="2" @border={{true}}>Option B</group.radio>
+            <ElRadioGroup @disabled={{true}} @size="mini" @value={{this.withBordersRadio4}} as |Group|>
+                <Group.Radio @label="1" @border={{true}}>Option A</Group.Radio>
+                <Group.Radio @label="2" @border={{true}}>Option B</Group.Radio>
             </ElRadioGroup>
         </div>
    </demo.example>

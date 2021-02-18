@@ -32,7 +32,7 @@ If you want to take a look what we have done, please visit: [https://yicencloud.
 
 #### Form
 
-* [ ] Radio
+* [x] Radio
 * [ ] Checkbox
 * [ ] Input
 * [ ] InputNumber

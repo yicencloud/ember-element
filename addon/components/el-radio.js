@@ -16,7 +16,7 @@ import { action } from "@ember/object";
  */
 export default class ElRadioComponent extends Component {
   /**
-   * whether the passed `value` is equals `label`
+   * whether the passed `value` equals to `label`
    * 
    * @property checked
    * @type boolean

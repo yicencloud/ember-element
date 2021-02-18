@@ -3,6 +3,7 @@
 # Icon
 
 Element provides a set of common icons.
+
 ## Basic usage
 
 Just assign the `icon` attribute without `el-icon-` prefix.

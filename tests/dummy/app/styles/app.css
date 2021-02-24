@@ -1,11 +1,18 @@
-@import 'ember-element.css';
-@import './layout.css';
-@import './container.css';
-@import './icon.css';
-@import './button.css';
+@import "ember-element.css";
+@import "./layout.css";
+@import "./container.css";
+@import "./icon.css";
+@import "./button.css";
 
 :root {
   --brand-primary: #409eff;
+}
+
+.index-main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
 }
 
 .demo-block .description {

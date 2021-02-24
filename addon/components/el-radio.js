@@ -6,6 +6,10 @@ import argument from "../decorators/argument";
  * Single selection among multiple options.
  *
  * @author Tower He (towerhe@gmail.com)
+ * 
+ * @class ElRadioComponent
+ * @extends Glimmer.Component
+ * @public
  */
 export default class ElRadioComponent extends Component {
   /**

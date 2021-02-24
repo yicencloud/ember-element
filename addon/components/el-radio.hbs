@@ -3,7 +3,6 @@
   aria-checked={{this.checked}}
   tabindex="0"
   class="el-radio {{if @size (concat "el-radio--" @size)}} {{if @border "is-bordered"}} {{if this.checked "is-checked"}} {{if @disabled "is-disabled"}}"
-  {{on "click" this.handleClick}}
 >
   <span class="el-radio__input {{if this.checked "is-checked"}} {{if @disabled "is-disabled"}}">
     <span class="el-radio__inner"></span>
@@ -13,6 +12,7 @@
       name={{@name}}
       class="el-radio__original"
       value={{@label}}
+      onclick={{this.handleClick}}
     />
   </span>
   <span class="el-radio__label">

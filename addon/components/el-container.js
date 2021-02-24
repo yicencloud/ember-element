@@ -1,7 +1,6 @@
 import Component from "@ember/component";
 import { tracked } from "@glimmer/tracking";
 import { computed } from "@ember/object";
-import argument from "../decorators/argument";
 
 /**
  * @author Tower He (towerhe@gmail.com)

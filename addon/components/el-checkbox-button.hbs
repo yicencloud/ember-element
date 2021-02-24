@@ -1,0 +1,21 @@
+<label
+  role="checkbox"
+  aria-checked={{this.checked}}
+  class="el-checkbox-button {{if this.size (concat "el-checkbox-button--" this.size)}} {{if this.checked "is-checked"}} {{if this.disabled "is-disabled"}}"
+>
+  <input
+    name={{@name}}
+    disabled={{this.disabled}}
+    type="checkbox"
+    class="el-checkbox-button__original"
+    value={{this.value}}
+    onclick={{this.handleChange}}
+  />
+  <span class="el-checkbox-button__inner">
+    {{#if (has-block)}}
+      {{yield}}
+    {{else}}
+      {{@label}}
+    {{/if}}
+  </span>
+</label>

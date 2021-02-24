@@ -33,7 +33,7 @@ If you want to take a look at what we have done, please visit: [https://yicenclo
 #### Form
 
 * [x] Radio
-* [ ] Checkbox
+* [x] Checkbox
 * [ ] Input
 * [ ] InputNumber
 * [ ] Select

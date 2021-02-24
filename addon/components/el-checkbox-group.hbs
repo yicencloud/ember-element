@@ -1,0 +1,10 @@
+<div role="group" aria-label="checkbox-group-label" class="el-checkbox-group">
+  {{yield
+    (hash
+      Checkbox=(component "el-checkbox" group=this change=this.handleChange)
+      CheckboxButton=(component
+        "el-checkbox-button" group=this change=this.handleChange
+      )
+    )
+  }}
+</div>

@@ -1,0 +1,26 @@
+<label
+  class="el-checkbox {{if this.size (concat "el-checkbox--" this.size)}} {{if this.border "is-bordered"}} {{if this.checked "is-checked"}} {{if this.disabled "is-disabled"}}"
+>
+  <span
+    aria-checked={{if this.indeterminate "mixed"}}
+    class="el-checkbox__input {{if this.checked "is-checked"}} {{if this.indeterminate "is-indeterminate"}} {{if this.disabled "is-disabled"}}"
+  >
+    <span class="el-checkbox__inner"></span>
+    <input
+      name={{@name}}
+      disabled={{this.disabled}}
+      type="checkbox"
+      aria-hidden="false"
+      class="el-checkbox__original"
+      value={{this.value}}
+      onclick={{this.handleChange}}
+    />
+  </span>
+  <span class="el-checkbox__label">
+    {{#if (has-block)}}
+      {{yield}}
+    {{else}}
+      {{@label}}
+    {{/if}}
+  </span>
+</label>

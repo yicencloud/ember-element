@@ -90,17 +90,17 @@ export default class ElRadioComponent extends Component {
   /**
    * when clicking the radio this action is called with the value of the radio.
    *
-   * @event onClick
+   * @event change
    * @param {string | number | boolean} value
    * @public
    */
 
   @action
-  handleClick() {
-    if (this.args.onClick === undefined) {
+  handleChange() {
+    if (this.args.change === undefined) {
       return;
     }
 
-    this.args.onClick(this.args.label);
+    this.args.change(this.args.label);
   }
 }

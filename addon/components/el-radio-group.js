@@ -66,7 +66,7 @@ export default class ElRadioGroupComponent extends Component {
   /**
    * when clicking the nested radio this action is called with the value of the radio.
    *
-   * @event onChange
+   * @event change
    * @param {string | number | boolean} value
    * @public
    */
@@ -76,11 +76,11 @@ export default class ElRadioGroupComponent extends Component {
    * @param {string | number | boolean} value the value of the chosen radio
    */
   @action
-  updateValue(value) {
-    if (this.args.onChange === undefined) {
+  handleChange(value) {
+    if (this.args.change === undefined) {
       return;
     }
 
-    this.args.onChange(value);
+    this.args.change(value);
   }
 }

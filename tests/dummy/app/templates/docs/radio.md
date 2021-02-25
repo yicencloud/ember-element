@@ -10,12 +10,12 @@ Radio should not have too many options. Otherwise, use the Select component inst
 
 <DocsDemo @class="demo-block" as |demo|>
     <demo.example @name="radio-basic-usage-demo.hbs">
-        <ElRadio @value={{this.radio}} @label="1" @onClick={{this.changeRadio}}>Option A</ElRadio>
-        <ElRadio @value={{this.radio}} @label="2" @onClick={{this.changeRadio}}>Option B</ElRadio>
+        <ElRadio @value={{this.radio}} @label="1" @change={{this.changeRadio}}>Option A</ElRadio>
+        <ElRadio @value={{this.radio}} @label="2" @change={{this.changeRadio}}>Option B</ElRadio>
    </demo.example>
     <div class="description">
         Creating a radio component is easy, you just need to bind a variable to Radio's `value`. It equals to the value of `label` of the chosen radio. The type of `label` is `String`, `Number` or `Boolean`.
-        Radio will trigger an `onClick` event and pass `label` as the parameter for updating `value`.
+        Radio will trigger an `change` event and pass `label` as the parameter for updating `value`.
     </div>
     <demo.snippet @name="radio-basic-usage-demo.hbs" />
     <demo.snippet @name="radio-basic-usage-demo.js" />
@@ -43,7 +43,7 @@ Suitable for choosing from some mutually exclusive options.
 
 <DocsDemo @class="demo-block" as |demo|>
     <demo.example @name="radio-button-group-demo.hbs">
-        <ElRadioGroup @value={{this.groupRadio}} @onChange={{this.changeGroupRadio}} as |Group|>
+        <ElRadioGroup @value={{this.groupRadio}} @change={{this.changeGroupRadio}} as |Group|>
             <Group.Radio @label="3">Option A</Group.Radio>
             <Group.Radio @label="6">Option B</Group.Radio>
             <Group.Radio @label="9">Option C</Group.Radio>
@@ -62,14 +62,14 @@ Radio with button styles.
 
 <DocsDemo @class="demo-block" as |demo|>
     <demo.example @name="radio-button-styles-demo.hbs">
-        <ElRadioGroup @value={{this.buttonStylesRadio1}} @onChange={{this.changeButtonStylesRadio1}} @textColor="#F56C6C" @fill="#fbc4c4" as |Group|>
+        <ElRadioGroup @value={{this.buttonStylesRadio1}} @change={{this.changeButtonStylesRadio1}} @textColor="#F56C6C" @fill="#fbc4c4" as |Group|>
             <Group.RadioButton @label="New York">New York</Group.RadioButton>
             <Group.RadioButton @label="Washington">Washington</Group.RadioButton>
             <Group.RadioButton @label="Los Angeles">Los Angeles</Group.RadioButton>
             <Group.RadioButton @label="Chicago">Chicago</Group.RadioButton>
         </ElRadioGroup>
         <div style="margin-top: 20px">
-            <ElRadioGroup @size="medium" @value={{this.buttonStylesRadio2}} @onChange={{this.changeButtonStylesRadio2}} as |Group|>
+            <ElRadioGroup @size="medium" @value={{this.buttonStylesRadio2}} @change={{this.changeButtonStylesRadio2}} as |Group|>
                 <Group.RadioButton @label="New York">New York</Group.RadioButton>
                 <Group.RadioButton @label="Washington">Washington</Group.RadioButton>
                 <Group.RadioButton @label="Los Angeles">Los Angeles</Group.RadioButton>
@@ -77,7 +77,7 @@ Radio with button styles.
             </ElRadioGroup>
         </div>
         <div style="margin-top: 20px">
-            <ElRadioGroup @size="small" @value={{this.buttonStylesRadio3}} @onChange={{this.changeButtonStylesRadio3}} as |Group|>
+            <ElRadioGroup @size="small" @value={{this.buttonStylesRadio3}} @change={{this.changeButtonStylesRadio3}} as |Group|>
                 <Group.RadioButton @label="New York">New York</Group.RadioButton>
                 <Group.RadioButton @label="Washington">Washington</Group.RadioButton>
                 <Group.RadioButton @label="Los Angeles">Los Angeles</Group.RadioButton>
@@ -105,12 +105,12 @@ Radio with button styles.
 <DocsDemo @class="demo-block" as |demo|>
     <demo.example @name="radio-with-borders-demo.hbs">
         <div>
-            <ElRadio @value={{this.withBordersRadio1}} @label="1" @border={{true}} @onClick={{this.changeWithBordersRadio1}}>Option A</ElRadio>
-            <ElRadio @value={{this.withBordersRadio1}} @label="2" @border={{true}} @onClick={{this.changeWithBordersRadio1}}>Option B</ElRadio>
+            <ElRadio @value={{this.withBordersRadio1}} @label="1" @border={{true}} @change={{this.changeWithBordersRadio1}}>Option A</ElRadio>
+            <ElRadio @value={{this.withBordersRadio1}} @label="2" @border={{true}} @change={{this.changeWithBordersRadio1}}>Option B</ElRadio>
         </div>
         <div style="margin-top: 20px">
-            <ElRadio @value={{this.withBordersRadio2}} @label="1" @border={{true}} @size="medium" @onClick={{this.changeWithBordersRadio2}}>Option A</ElRadio>
-            <ElRadio @value={{this.withBordersRadio2}} @label="2" @border={{true}} @size="medium" @onClick={{this.changeWithBordersRadio2}}>Option B</ElRadio>
+            <ElRadio @value={{this.withBordersRadio2}} @label="1" @border={{true}} @size="medium" @change={{this.changeWithBordersRadio2}}>Option A</ElRadio>
+            <ElRadio @value={{this.withBordersRadio2}} @label="2" @border={{true}} @size="medium" @change={{this.changeWithBordersRadio2}}>Option B</ElRadio>
         </div>
         <div style="margin-top: 20px">
             <ElRadioGroup @size="small" @value={{this.withBordersRadio3}} as |Group|>
@@ -147,7 +147,7 @@ Radio with button styles.
 
 | Event Name | Description                           | Parameters                          |
 | ---------- | ------------------------------------- | ----------------------------------- |
-| onClick    | triggers when the bound value changes | the label value of the chosen radio |
+| change     | triggers when the bound value changes | the label value of the chosen radio |
 
 ## Radio-group Attributes
 
@@ -163,7 +163,7 @@ Radio with button styles.
 
 | Event Name | Description                           | Parameters                          |
 | ---------- | ------------------------------------- | ----------------------------------- |
-| onChange   | triggers when the bound value changes | the label value of the chosen radio |
+| change     | triggers when the bound value changes | the label value of the chosen radio |
 
 ## Radio-button Attributes
 

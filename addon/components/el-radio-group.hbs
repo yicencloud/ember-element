@@ -1,6 +1,6 @@
 <div role="radiogroup" class="el-radio-group">
   {{yield (hash
-    Radio=(component "el-radio" disabled=@disabled value=@value size=@size change=this.handleChange)
-    RadioButton=(component "el-radio-button" disabled=@disabled value=@value size=@size textColor=this.textColor fill=this.fill change=this.handleChange)
+    Radio=(component "el-radio" group=this change=this.handleChange)
+    RadioButton=(component "el-radio-button" group=this change=this.handleChange)
   )}}
 </div>

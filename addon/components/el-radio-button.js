@@ -1,7 +1,6 @@
 import RadioComponent from "./el-radio";
 import { computed } from "@ember/object";
 import { alias } from "@ember/object/computed";
-import argument from "../decorators/argument";
 
 /**
  * Single selection among multiple options and looks like buttons.
@@ -18,8 +17,13 @@ export default class ElRadioButtonComponent extends RadioComponent {
    * @default "#ffffff"
    * @public
    */
-  @argument
-  textColor = "#ffffff";
+  get textColor() {
+    if (this.group && this.group.textColor) {
+      return this.group.textColor;
+    }
+
+    return "#ffffff";
+  }
 
   /**
    * border and background color of the checked radio
@@ -29,8 +33,13 @@ export default class ElRadioButtonComponent extends RadioComponent {
    * @default "#409EFF"
    * @public
    */
-  @argument
-  fill = "#409EFF";
+  get fill() {
+    if (this.group && this.group.fill) {
+      return this.group.fill;
+    }
+
+    return "#409EFF";
+  }
 
   /**
    * Alias of `checked`

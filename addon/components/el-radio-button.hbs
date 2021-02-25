@@ -1,11 +1,11 @@
 <label
   role="radio"
   aria-checked={{this.checked}}
-  aria-disabled={{@disabled}}
-  class="el-radio-button {{if @size (concat "el-radio-button--" @size)}} {{if this.active "is-active"}} {{if @disabled "is-disabled"}}"
+  aria-disabled={{this.disabled}}
+  class="el-radio-button {{if this.size (concat "el-radio-button--" this.size)}} {{if this.active "is-active"}} {{if this.disabled "is-disabled"}}"
 >
   <input
-    disabled={{@disabled}}
+    disabled={{this.disabled}}
     type="radio"
     checked={{this.checked}}
     name={{@name}}

@@ -19,8 +19,15 @@ export default class ElRadioComponent extends Component {
    * @type {string | number | boolean}
    * @public
    */
-  @argument
-  value = null;
+  get value() {
+    if (this.args.value !== undefined) {
+      return this.args.value;
+    }
+
+    if (this.group) {
+      return this.group.value;
+    }
+  }
 
   /**
    * the value of Radio
@@ -40,8 +47,17 @@ export default class ElRadioComponent extends Component {
    * @default false
    * @public
    */
-  @argument
-  disabled = false;
+  get disabled() {
+    if (this.args.disabled) {
+      return true;
+    }
+
+    if (this.group) {
+      return this.group.disabled;
+    }
+
+    return false;
+  }
 
   /**
    * whether to add a border around Radio
@@ -63,8 +79,17 @@ export default class ElRadioComponent extends Component {
    * @type {string}
    * @public
    */
-  @argument
-  size = null;
+  get size() {
+    if (this.args.size) {
+      return this.args.size;
+    }
+
+    if (this.group) {
+      return this.group.size;
+    }
+
+    return null;
+  };
 
   /**
    * native 'name' attribute
@@ -84,8 +109,18 @@ export default class ElRadioComponent extends Component {
    * @public
    */
   get checked() {
-    return this.args.value === this.args.label;
+    return this.value === this.args.label;
   }
+
+  /**
+   * the group which radio is nested in.
+   * 
+   * @property group
+   * @type {ElRadioGroupComponent}
+   * @public
+   */
+  @argument
+  group = null;
 
   /**
    * when clicking the radio this action is called with the value of the radio.

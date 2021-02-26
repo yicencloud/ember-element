@@ -1,0 +1,44 @@
+<div
+  role="switch"
+  aria-checked={{this.checked}}
+  aria-disabled={{this.disabled}}
+  class="el-switch {{if this.disabled "is-disabled"}} {{if this.checked "is-checked"}}"
+  ...attributes
+  {{on "click" this.handleChange}}
+>
+  <input
+    disabled={{this.disabled}}
+    type="checkbox"
+    name={{this.name}}
+    class="el-switch__input"
+  />
+  {{#if (or this.inactiveText this.inactiveIconClass)}}
+    <span
+      class="el-switch__label el-switch__label--left {{unless this.checked "is-active"}}"
+    >
+      {{#if this.inactiveText}}
+        <span aria-hidden="true">
+          {{this.inactiveText}}
+        </span>
+      {{/if}}
+      {{#if this.inactiveIconClass}}
+        <ElIcon @icon={{this.inactiveIconClass}} />
+      {{/if}}
+    </span>
+  {{/if}}
+  <span class="el-switch__core" style={{this.style}}></span>
+  {{#if (or this.activeText this.activeIconClass)}}
+    <span
+      class="el-switch__label el-switch__label--right {{if this.checked "is-active"}}"
+    >
+      {{#if this.activeText}}
+        <span>
+          {{this.activeText}}
+        </span>
+      {{/if}}
+      {{#if this.activeIconClass}}
+        <ElIcon @icon={{this.activeIconClass}} />
+      {{/if}}
+    </span>
+  {{/if}}
+</div>

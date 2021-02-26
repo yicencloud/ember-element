@@ -35,7 +35,7 @@ Router.map(function () {
     this.route("input-number");
     this.route("select");
     this.route("cascader");
-    this.route("switch");
+    this.route("switchcomp");
     this.route("slider");
     this.route("time-picker");
     this.route("date-picker");

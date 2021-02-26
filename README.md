@@ -38,7 +38,7 @@ If you want to take a look at what we have done, please visit: [https://yicenclo
 * [ ] InputNumber
 * [ ] Select
 * [ ] Cascader
-* [ ] Switch
+* [-] Switch
 * [ ] Slider
 * [ ] TimePicker
 * [ ] DatePicker

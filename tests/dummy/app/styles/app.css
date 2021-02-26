@@ -3,6 +3,7 @@
 @import "./container.css";
 @import "./icon.css";
 @import "./button.css";
+@import "./switch.css";
 
 :root {
   --brand-primary: #409eff;

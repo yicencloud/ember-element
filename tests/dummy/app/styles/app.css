@@ -5,6 +5,7 @@
 @import "./button.css";
 @import "./switch.css";
 @import "./rate.css";
+@import "./tag.css";
 
 :root {
   --brand-primary: #409eff;

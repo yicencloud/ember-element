@@ -1,0 +1,9 @@
+<span
+  class="el-tag {{if this.type (concat "el-tag--" this.type)}} {{if this.size (concat "el-tag--" this.size)}} el-tag--{{this.effect}} {{if this.hit "is-hit"}}"
+  style={{this.style}}
+>
+  {{yield}}
+  {{#if this.closable}}
+    <ElIcon @icon="close" class="el-tag__close" @click={{this.handleClose}} />
+  {{/if}}
+</span>

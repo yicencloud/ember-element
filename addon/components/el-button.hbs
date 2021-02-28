@@ -2,6 +2,7 @@
     disabled={{@disabled}}
     type={{this.nativeType}}
     class="el-button el-button--{{this.type}} {{if @size (concat "el-button--" @size)}} {{if @plain "is-plain"}} {{if @round "is-round"}} {{if @circle "is-circle"}} {{if @disabled "is-disabled"}} {{if @loading "is-loading"}}"
+    {{on "click" this.handleClick}}
     ...attributes
     >
     {{#if this.icon}}

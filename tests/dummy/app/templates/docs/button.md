@@ -185,3 +185,9 @@ Besides default size, Button component provides three additional sizes for you t
 | icon        | icon class name                        | string  | —                                                  | —       |
 | autofocus   | same as native button's autofocus      | boolean | —                                                  | false   |
 | native-type | same as native button's type           | string  | button / submit / reset                            | button  |
+
+## Events
+
+| Event Name | Description                     | Parameters |
+| ---------- | ------------------------------- | ---------- |
+| click      | triggers when button is clicked | —          |

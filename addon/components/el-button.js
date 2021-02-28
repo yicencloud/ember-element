@@ -1,4 +1,5 @@
 import Component from "@glimmer/component";
+import { action } from "@ember/object";
 import argument from "../decorators/argument";
 
 /**
@@ -124,5 +125,19 @@ export default class ElButtonComponent extends Component {
     }
 
     return this.args.icon;
+  }
+
+  /**
+   * triggers when button is clicked
+   * 
+   * @event click
+   * @public
+   */
+
+  @action
+  handleClick() {
+    if (this.args.click !== undefined) {
+      this.args.click();
+    }
   }
 }

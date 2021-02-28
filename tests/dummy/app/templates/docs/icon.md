@@ -1,5 +1,4 @@
 <!-- markdownlint-disable MD033 -->
-
 # Icon
 
 Element provides a set of common icons.
@@ -30,3 +29,9 @@ Just assign the `icon` attribute without `el-icon-` prefix.
     </li>
     {{/each}}
 </ul>
+
+## Events
+
+| Event Name | Description                   | Parameters |
+| ---------- | ----------------------------- | ---------- |
+| click      | triggers when icon is clicked | —          |

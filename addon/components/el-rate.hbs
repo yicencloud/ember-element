@@ -1,0 +1,21 @@
+<div
+  role="slider"
+  aria-valuetext="{{this.text}}"
+  aria-valuemin="0"
+  aria-valuemax="{{this.max}}"
+  tabindex="0"
+  class="el-rate"
+  aria-valuenow="{{this.value}}"
+>
+  {{#each (range 1 this.max true) as |i|}}
+    <ElRateItem
+      @value={{i}}
+      @rate={{this}}
+    />
+  {{/each}}
+  {{#if (or this.showText this.showScore)}}
+    <span class="el-rate__text" style="color: {{this.textColor}};">
+      {{this.text}}
+    </span>
+  {{/if}}
+</div>

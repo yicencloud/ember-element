@@ -1,0 +1,20 @@
+<span
+  class="el-rate__item"
+  style="cursor: {{if this.disabled "auto" "pointer"}};"
+  {{on "mousemove" this.setActive}}
+  {{on "mouseleave" this.resetActive}}
+  {{on "click" this.handleChange}}
+>
+  <i
+    class="el-rate__icon {{this.iconClass}} {{if this.hover "hover"}}"
+    style="color: {{this.color}};"
+  >
+    {{#if this.isPartial}}
+      <i
+        class="el-rate__decimal {{this.iconClass}}"
+        style="color: {{this.partialColor}}; width: {{this.width}}"
+      >
+      </i>
+    {{/if}}
+  </i>
+</span>

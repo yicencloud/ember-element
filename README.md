@@ -81,7 +81,7 @@ If you want to take a look at what we have done, please visit: [https://yicenclo
 * [ ] Tooltip
 * [ ] Popover
 * [ ] Popconfirm
-* [ ] Card
+* [-] Card
 * [ ] Carousel
 * [ ] Collapse
 * [ ] Timeline

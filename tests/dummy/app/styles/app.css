@@ -6,6 +6,7 @@
 @import "./switch.css";
 @import "./rate.css";
 @import "./tag.css";
+@import "./progress.css";
 
 :root {
   --brand-primary: #409eff;

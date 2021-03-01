@@ -1,0 +1,58 @@
+<div
+  role="progressbar"
+  aria-valuenow={{this.percentage}}
+  aria-valuemin="0"
+  aria-valuemax="100"
+  class="el-progress el-progress--{{this.type}} {{if this.textInline "el-progress--text-inside"}} {{if this.status (concat "is-" this.status)}}"
+>
+  {{#if (eq this.type "line")}}
+    <div class="el-progress-bar">
+      <div class="el-progress-bar__outer" style="height: {{this.strokeWidth}}px;">
+        <div class="el-progress-bar__inner" style={{this.barStyle}}>
+          {{#if this.textInline}}
+            <div class="el-progress-bar__innerText">
+              {{this.percentage}}%
+            </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <div class="el-progress-circle" style="height: {{this.width}}px; width: {{this.width}}px;">
+      <svg viewBox="0 0 100 100">
+        <path
+          d="M 50 50
+          m 0 {{if (eq this.type "dashboard") 47 -47}}
+          a 47 47 0 1 1 0 {{if (eq this.type "dashboard") -94 94}}
+          a 47 47 0 1 1 0 {{if (eq this.type "dashboard") 94 -94}}"
+          stroke="#e5e9f2"
+          stroke-width="4.8"
+          fill="none"
+          class="el-progress-circle__track"
+          style="stroke-dasharray: {{if (eq this.type "dashboard") 221.482 295.31}}px, 295.31px; stroke-dashoffset: {{this.strokeDashOffset}}px;"
+        ></path>
+        <path
+          d="M 50 50
+          m 0 {{if (eq this.type "dashboard") 47 -47}}
+          a 47 47 0 1 1 0 {{if (eq this.type "dashboard") -94 94}}
+          a 47 47 0 1 1 0 {{if (eq this.type "dashboard") 94 -94}}"
+          stroke={{this.stroke}}
+          fill="none"
+          stroke-linecap="{{this.strokeLinecap}}"
+          stroke-width={{if this.percentage "4.8" "0"}}
+          class="el-progress-circle__path"
+          style="stroke-dasharray: {{this.strokeDashLength}}px, 295.31px; stroke-dashoffset: {{this.strokeDashOffset}}px; transition: stroke-dasharray 0.6s ease 0s, stroke 0.6s ease 0s;"
+        ></path>
+      </svg>
+    </div>
+  {{/if}}
+  {{#unless this.textInline}}
+    <div class="el-progress__text" style="font-size: 14.4px;">
+      {{#if this.status}}
+        <ElIcon @icon={{this.icon}} />
+      {{else}}
+        {{this.text}}
+      {{/if}}
+    </div>
+  {{/unless}}
+</div>

@@ -82,7 +82,7 @@ If you want to take a look at what we have done, please visit: [https://yicenclo
 * [ ] Popover
 * [ ] Popconfirm
 * [-] Card
-* [ ] Carousel
+* [x] Carousel
 * [ ] Collapse
 * [ ] Timeline
 * [x] Divider

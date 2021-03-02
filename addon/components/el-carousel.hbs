@@ -1,0 +1,61 @@
+<div
+  class="el-carousel el-carousel--{{this.direction}} {{if this.card "el-carousel--card"}}"
+  {{on "mouseover" this.handleMouseOver}}
+  {{on "mouseleave" this.handleMouseLeave}}
+  {{did-insert this.didInsert}}
+  {{will-destroy this.willDestroy}}
+>
+  <div class="el-carousel__container" style="height: {{this.height}};">
+    {{#if this.showArrow}}
+      <button
+        type="button"
+        class="el-carousel__arrow el-carousel__arrow--left"
+        {{on "click" this.prev}}
+      >
+        <i class="el-icon-arrow-left"></i>
+      </button>
+      <button
+        type="button"
+        class="el-carousel__arrow el-carousel__arrow--right"
+        {{on "click" this.next}}
+      >
+        <i class="el-icon-arrow-right"></i>
+      </button>
+    {{/if}}
+    {{yield (hash Item=(component "el-carousel-item" carousel=this))}}
+  </div>
+  {{#if (and (not-eq this.indicatorPosition "none") (not-eq this.indicatorPosition "outside"))}}
+    <ul
+      class="el-carousel__indicators el-carousel__indicators--{{this.direction}}"
+    >
+      {{#each (range 0 this.itemsCount) as |i|}}
+        <li
+          class="el-carousel__indicator el-carousel__indicator--{{this.direction}} {{if (eq i this.currentIndex) "is-active"}}"
+        >
+          <button
+            class="el-carousel__button"
+            {{on this.triggerEvent (fn this.setActiveItem i)}}
+          ></button>
+        </li>
+      {{/each}}
+    </ul>
+  {{/if}}
+</div>
+{{#if (eq this.indicatorPosition "outside")}}
+  <ul
+    class="el-carousel__indicators el-carousel__indicators--{{this.direction}} el-carousel__indicators--outside"
+    {{on "mouseover" this.handleMouseOver}}
+    {{on "mouseleave" this.handleMouseLeave}}
+  >
+    {{#each (range 0 this.itemsCount) as |i|}}
+      <li
+        class="el-carousel__indicator el-carousel__indicator--{{this.direction}} {{if (eq i this.currentIndex) "is-active"}}"
+      >
+        <button
+          class="el-carousel__button"
+          {{on this.triggerEvent (fn this.setActiveItem i)}}
+        ></button>
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}

@@ -8,6 +8,7 @@
 @import "./tag.css";
 @import "./progress.css";
 @import "./card.css";
+@import "./carousel.css";
 
 :root {
   --brand-primary: #409eff;

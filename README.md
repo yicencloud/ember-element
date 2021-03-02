@@ -95,7 +95,7 @@ If you want to take a look at what we have done, please visit: [https://yicenclo
 
 ## Compatibility
 
-* Ember.js v3.12 or above
+* Ember.js v3.16 or above
 * Ember CLI v2.13 or above
 * Node.js v10 or above
 

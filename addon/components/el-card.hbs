@@ -1,4 +1,9 @@
 <div class="el-card is-{{this.shadow}}-shadow" ...attributes>
+  {{#if (has-block "header")}}
+    <div class="el-card__header">
+      {{yield to="header"}}
+    </div>
+  {{/if}}
   <div class="el-card__body" style={{this.bodyStyleString}}>
     {{yield}}
   </div>

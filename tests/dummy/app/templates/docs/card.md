@@ -3,13 +3,31 @@
 
 Integrate information in a card container.
 
-## TODO
-
-* [ ] implements header block (needs ember.js 3.27+);
-
 ## Basic usage
 
 Card includes title, content and operations.
+
+<DocsDemo @class="demo-block" as |demo|>
+    <demo.example @name="card-basic-usage-demo.hbs">
+      <ElCard class="box-card">
+        <:header>
+          <div class="clearfix">
+            <span>Card name</span>
+            <ElButton style="float: right; padding: 3px 0" @type="text">Operation button</ElButton>
+          </div>
+        </:header>
+        <:default>
+          {{#each (range 1 4 true) as |i|}}
+            <div class="text item">List item {{i}}</div>
+          {{/each}}
+        </:default>
+      </ElCard>
+    </demo.example>
+    <div class="description">
+      Card is made up of `header` and `body`. `header` is optional, and its content distribution depends on a named slot.
+    </div>
+    <demo.snippet @name="card-basic-usage-demo.hbs" />
+</DocsDemo>
 
 ## Simple card
 

@@ -1,0 +1,29 @@
+<div class="el-collapse-item {{if this.active "is-active"}} {{if this.disabled "is-disabled"}}">
+  <div
+    role="tab"
+    aria-expanded={{this.active}}
+    {{on "click" this.handleClick}}
+  >
+    <div
+      role="button"
+      class="el-collapse-item__header {{if this.active "is-active"}}"
+    >
+      {{#if (has-block "title")}}
+        {{yield to="title"}}
+      {{else}}
+        {{this.title}}
+      {{/if}}
+      <i class="el-collapse-item__arrow el-icon-arrow-right {{if this.active "is-active"}}"></i>
+    </div>
+  </div>
+  {{#if this.active}}
+  <div
+    role="tabpanel"
+    class="el-collapse-item__wrap {{if this.active "collapse-transition v-enter-active v-enter-to"}}"
+  >
+    <div class="el-collapse-item__content">
+      {{yield}}
+    </div>
+  </div>
+  {{/if}}
+</div>

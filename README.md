@@ -83,7 +83,7 @@ If you want to take a look at what we have done, please visit: [https://yicenclo
 * [ ] Popconfirm
 * [-] Card
 * [x] Carousel
-* [ ] Collapse
+* [-] Collapse
 * [ ] Timeline
 * [x] Divider
 * [ ] Calendar

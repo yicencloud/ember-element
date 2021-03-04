@@ -1,0 +1,9 @@
+<div role="tablist" aria-multiselectable="true" class="el-collapse">
+  {{yield
+    (hash
+      Item=(component
+        "el-collapse-item" selected=this.value click=this.handleChange
+      )
+    )
+  }}
+</div>

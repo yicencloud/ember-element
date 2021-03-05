@@ -84,7 +84,7 @@ If you want to take a look at what we have done, please visit: [https://yicenclo
 * [-] Card
 * [x] Carousel
 * [-] Collapse
-* [ ] Timeline
+* [-] Timeline
 * [x] Divider
 * [ ] Calendar
 * [ ] Image

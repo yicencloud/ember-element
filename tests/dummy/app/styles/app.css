@@ -9,6 +9,7 @@
 @import "./progress.css";
 @import "./card.css";
 @import "./carousel.css";
+@import "./timeline.css";
 
 :root {
   --brand-primary: #409eff;

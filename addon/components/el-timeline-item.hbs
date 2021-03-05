@@ -1,0 +1,26 @@
+<li class="el-timeline-item">
+  <div class="el-timeline-item__tail"></div>
+  <div
+    class="el-timeline-item__node el-timeline-item__node--{{this.size}} el-timeline-item__node--{{this.type}}"
+    style={{this.style}}
+  >
+    {{#if this.icon}}
+      <ElIcon @icon={{this.icon}} class="el-timeline-item__icon" />
+    {{/if}}
+  </div>
+  <div class="el-timeline-item__wrapper">
+    {{#if (eq this.placement "top")}}
+      <div class="el-timeline-item__timestamp is-top">
+        {{this.timestamp}}
+      </div>
+    {{/if}}
+    <div class="el-timeline-item__content">
+      {{yield}}
+    </div>
+    {{#if (eq this.placement "bottom")}}
+      <div class="el-timeline-item__timestamp is-bottom">
+        {{this.timestamp}}
+      </div>
+    {{/if}}
+  </div>
+</li>

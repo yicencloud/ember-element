@@ -24,7 +24,7 @@ Besides the native features of img, support lazy load, custom placeholder and lo
       {{/each}}
     </demo.example>
     <div class="description">
-      Indicate how the image should be resized to fit its container by `fit`, same as native [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)。
+      Indicate how the image should be resized to fit its container by `fit`, same as native [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
     </div>
     <demo.snippet @name="image-basic-usage-demo.hbs" />
     <demo.snippet @name="image-basic-usage-demo.js" />

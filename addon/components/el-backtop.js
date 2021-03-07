@@ -73,8 +73,6 @@ export default class ElBacktopComponent extends Component {
 
   @action
   handleDidInsert() {
-    console.log(this.targetElement.scrollTop, this.visibilityHeight);
-
     this.targetElement.addEventListener(
       'scroll',
       this._checkTargetScrollPosition.bind(this)

@@ -1,0 +1,55 @@
+<div class="el-image-viewer__wrapper" style="z-index: {{this.zIndex}};">
+  <div class="el-image-viewer__mask"></div>
+  <span
+    class="el-image-viewer__btn el-image-viewer__close"
+    {{on 'click' this.handleCloseClick}}
+  >
+    <i class="el-icon-close"></i>
+  </span>
+  <span
+    class="el-image-viewer__btn el-image-viewer__prev"
+    {{on 'click' this.handlePrevClick}}
+  >
+    <i class="el-icon-arrow-left"></i>
+  </span>
+  <span
+    class="el-image-viewer__btn el-image-viewer__next"
+    {{on 'click' this.handleNextClick}}
+  >
+    <i class="el-icon-arrow-right"></i>
+  </span>
+  <div class="el-image-viewer__btn el-image-viewer__actions">
+    <div class="el-image-viewer__actions__inner">
+      <i class="el-icon-zoom-out" {{on 'click' this.handleZoomOutClick}}></i>
+      <i class="el-icon-zoom-in" {{on 'click' this.handleZoomInClick}}></i>
+      <i class="el-image-viewer__actions__divider"></i>
+      {{#if this.fullscreen}}
+        <i
+          class="el-icon-c-scale-to-original"
+          {{on 'click' this.handleOriginClick}}
+        ></i>
+      {{else}}
+        <i
+          class="el-icon-full-screen"
+          {{on 'click' this.handleFullscreenClick}}
+        ></i>
+      {{/if}}
+      <i class="el-image-viewer__actions__divider"></i>
+      <i
+        class="el-icon-refresh-left"
+        {{on 'click' this.handleAnticlockwiseClick}}
+      ></i>
+      <i
+        class="el-icon-refresh-right"
+        {{on 'click' this.handleClockwiseClick}}
+      ></i>
+    </div>
+  </div>
+  <div class="el-image-viewer__canvas">
+    <img
+      src={{this.currentSrc}}
+      class="el-image-viewer__img"
+      style="transform: scale({{this.scale}}) rotate({{this.rotate}}deg); margin-left: 0px; margin-top: 0px; {{if (not this.fullscreen) 'max-height: 100%; max-width: 100%;'}}"
+    />
+  </div>
+</div>

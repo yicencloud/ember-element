@@ -1,0 +1,31 @@
+<div
+  class="el-image"
+  ...attributes
+  {{did-insert this.didInsert}}
+  {{on 'click' this.handleClick}}
+>
+  {{#if this.src}}
+    <img
+      alt={{this.alt}}
+      referrerpolicy={{this.referrerPolicy}}
+      src={{if (not this.lazy) this.src}}
+      class="el-image__inner"
+      style="object-fit: {{this.fit}};"
+      onload={{this.handleLoad}}
+      onerror={{this.handleError}}
+    />
+  {{else if (has-block 'error')}}
+    {{yield to='error'}}
+  {{else}}
+    <div class="el-image__error">
+      FAILED
+    </div>
+  {{/if}}
+</div>
+{{#if this.showViewer}}
+  <ElImageViewer
+    @zIndex={{this.zIndex}}
+    @previewSrcList={{this.previewSrcList}}
+    @close={{this.handleViewerCloseClick}}
+  />
+{{/if}}

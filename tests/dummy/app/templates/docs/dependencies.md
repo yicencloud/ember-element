@@ -5,6 +5,7 @@
 Ember addons dependencies will be installed when you install `ember-element`.
 
 * [ember-truth-helper 3.0.0](https://github.com/jmurphyau/ember-truth-helpers) HTMLBars template helpers for additional truth logic in if and unless statements.
+* [ember-style-modifier 0.5.0](https://github.com/jelhan/ember-style-modifier) `{{style}}` modifier to set an element's style using the CSSStyleDeclaration API.
 
 ## Node modules
 

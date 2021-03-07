@@ -87,11 +87,15 @@ If you want to take a look at what we have done, please visit: [https://yicenclo
 * [-] Timeline
 * [x] Divider
 * [ ] Calendar
-* [ ] Image
-* [ ] Backtop
+* [-] Image
+* [x] Backtop
 * [ ] InfiniteScroll
 * [ ] Avatar
 * [ ] Drawer
+
+#### Programming
+
+* [ ] use [`ember-style-modifier`](https://github.com/jelhan/ember-style-modifier) to set the style of html element.
 
 ## Compatibility
 

@@ -1,0 +1,16 @@
+<div
+  class="el-backtop"
+  {{style
+    right=(concat this.right 'px')
+    bottom=(concat this.bottom 'px')
+    display=(if this.show 'flex' 'none')
+  }}
+  {{on 'click' this.handleClick}}
+  {{did-insert this.handleDidInsert}}
+>
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    <i class="el-icon-caret-top"></i>
+  {{/if}}
+</div>

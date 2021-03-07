@@ -12,6 +12,7 @@
 @import "./timeline.css";
 @import "./image.css";
 @import "./infinite-scroll.css";
+@import "./avatar.css";
 
 :root {
   --brand-primary: #409eff;

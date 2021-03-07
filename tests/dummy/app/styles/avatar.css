@@ -1,0 +1,55 @@
+.demo-avatar.demo-basic {
+  text-align: center;
+}
+
+.demo-avatar .el-col:not(:last-child) {
+  border-right: 1px solid rgba(224, 230, 237, 0.5);
+}
+
+.demo-avatar .sub-title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #8492a6;
+}
+
+.demo-avatar.demo-basic .demo-basic--circle,
+.demo-avatar.demo-basic .demo-basic--square {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.demo-avatar.demo-basic .demo-basic--circle .block:not(:last-child),
+.demo-avatar.demo-basic .demo-basic--square .block:not(:last-child) {
+  border-right: 1px solid rgba(224, 230, 237, 0.5);
+}
+
+.demo-avatar.demo-basic .demo-basic--circle .block,
+.demo-avatar.demo-basic .demo-basic--square .block {
+  flex: 1;
+}
+
+.demo-avatar .demo-type {
+  display: flex;
+}
+.demo-avatar .demo-type > div:not(:last-child) {
+  border-right: 1px solid rgba(224, 230, 237, 0.5);
+}
+
+.demo-avatar .demo-type > div {
+  flex: 1;
+  text-align: center;
+}
+
+.demo-avatar .demo-fit {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.demo-avatar .demo-fit .block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+}

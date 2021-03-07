@@ -1,0 +1,38 @@
+{{#if this.isNumericSize}}
+  <span
+    class="el-avatar {{if this.icon 'el-avatar--icon'}} el-avatar--{{this.shape}}"
+    {{style
+      height=(concat this.size 'px')
+      width=(concat this.size 'px')
+      line-height=(concat this.size 'px')
+    }}
+  >
+    {{#if (has-block)}}
+      {{#if this.isValidSrc}}
+        <img src={{this.src}} alt={{this.alt}} {{style object-fit=this.fit}} onerror={{this.handleLoadImageFailed}} />
+      {{else}}
+        {{yield}}
+      {{/if}}
+    {{else if this.icon}}
+      <ElIcon @icon={{this.icon}} />
+    {{else}}
+      <img src={{this.src}} alt={{this.alt}} {{style object-fit=this.fit}} />
+    {{/if}}
+  </span>
+{{else}}
+  <span
+    class="el-avatar {{if this.icon 'el-avatar--icon'}} el-avatar--{{this.size}} el-avatar--{{this.shape}}"
+  >
+    {{#if (has-block)}}
+      {{#if this.isValidSrc}}
+        <img src={{this.src}} alt={{this.alt}} {{style object-fit=this.fit}} onerror={{this.handleLoadImageFailed}} />
+      {{else}}
+        {{yield}}
+      {{/if}}
+    {{else if this.icon}}
+      <ElIcon @icon={{this.icon}} />
+    {{else}}
+      <img src={{this.src}} alt={{this.alt}} {{style object-fit=this.fit}} />
+    {{/if}}
+  </span>
+{{/if}}

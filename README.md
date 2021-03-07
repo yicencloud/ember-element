@@ -90,7 +90,7 @@ If you want to take a look at what we have done, please visit: [https://yicenclo
 * [-] Image
 * [x] Backtop
 * [-] InfiniteScroll
-* [ ] Avatar
+* [x] Avatar
 * [ ] Drawer
 
 #### Programming

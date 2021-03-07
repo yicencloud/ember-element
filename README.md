@@ -89,7 +89,7 @@ If you want to take a look at what we have done, please visit: [https://yicenclo
 * [ ] Calendar
 * [-] Image
 * [x] Backtop
-* [ ] InfiniteScroll
+* [-] InfiniteScroll
 * [ ] Avatar
 * [ ] Drawer
 

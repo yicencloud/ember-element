@@ -11,6 +11,7 @@
 @import "./carousel.css";
 @import "./timeline.css";
 @import "./image.css";
+@import "./infinite-scroll.css";
 
 :root {
   --brand-primary: #409eff;

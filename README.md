@@ -60,7 +60,7 @@ If you want to take a look at what we have done, please visit: [https://yicenclo
 
 #### Notice
 
-* [ ] Alert
+* [x] Alert
 * [ ] Loading
 * [ ] Message
 * [ ] MessageBox
@@ -90,7 +90,7 @@ If you want to take a look at what we have done, please visit: [https://yicenclo
 * [-] Image
 * [x] Backtop
 * [-] InfiniteScroll
-* [x] Avatar
+* [-] Avatar
 * [ ] Drawer
 
 #### Programming

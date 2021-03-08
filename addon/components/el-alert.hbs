@@ -1,0 +1,33 @@
+<div
+  role="alert"
+  class="el-alert el-alert--{{this.type}} {{if this.center "is-center"}} is-{{this.effect}}"
+  {{style display=(if this.closed 'none' undefined)}}
+>
+  {{#if this.showIcon}}
+    <i class="el-alert__icon el-icon-{{this.type}} {{if this.description "is-big"}}"></i>
+  {{/if}}
+  <div class="el-alert__content">
+    <span class="el-alert__title {{if this.description "is-bold"}}">
+      {{#if (has-block "title")}}
+        {{yield to="title"}}
+      {{else}}
+        {{this.title}}
+      {{/if}}
+    </span>
+    {{#if this.description}}
+      <p class="el-alert__description">
+        {{#if (has-block)}}
+          {{yield}}
+        {{else}}
+          {{this.description}}
+        {{/if}}
+      </p>
+    {{/if}}
+    {{#if this.closable}}
+      <i
+        class="el-alert__closebtn {{if this.closeText "is-customed" "el-icon-close"}}"
+        {{on 'click' this.handleClose}}
+      >{{this.closeText}}</i>
+    {{/if}}
+  </div>
+</div>

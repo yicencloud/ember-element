@@ -1,0 +1,21 @@
+{{#if this.navElement}}
+  {{#in-element this.navElement insertBefore=null}}
+    <ElTabNavItem @pane={{this}} @click={{this.handleNavItemClick}} />
+  {{/in-element}}
+{{/if}}
+
+<div
+  role="tabpanel"
+  id="pane-{{this.name}}"
+  aria-labelledby="tab-{{this.name}}"
+  class="el-tab-pane"
+  {{style display=(if this.active '' 'none')}}
+>
+  {{#if (and (has-block 'label') this.navItemElement)}}
+    {{#in-element this.navItemElement}}
+      {{yield to='label'}}
+    {{/in-element}}
+  {{/if}}
+
+  {{yield}}
+</div>

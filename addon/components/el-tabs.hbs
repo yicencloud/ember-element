@@ -1,0 +1,39 @@
+<div class="el-tabs {{if this.type (concat "el-tabs--" this.type)}} el-tabs--{{this.position}}" {{did-insert this.handleDidInsert}}>
+  {{#if (eq this.position "bottom")}}
+    <div class="el-tabs__content">
+      {{yield (hash Pane=(component 'el-tab-pane' parent=this))}}
+    </div>
+  {{/if}}
+  <div class="el-tabs__header is-{{this.position}}">
+    {{#if this.editable}}
+      <span class="el-tabs__new-tab" {{on "click" (fn this.handleEdit "" "add")}}>
+        <ElIcon @icon="plus" />
+      </span>
+    {{/if}}
+    <div class="el-tabs__nav-wrap is-{{this.position}}">
+      <div class="el-tabs__nav-scroll">
+        <div
+          role="tablist"
+          class="el-tabs__nav is-{{this.position}}"
+          style="transform: translateX(0px);"
+        >
+          {{#unless this.type}}
+            <div
+              class="el-tabs__active-bar is-{{this.position}}"
+              {{style 
+                width=this.activeBarWidth
+                height=this.activeBarHeight
+                transform=this.activeBarTransform
+              }}
+            ></div>
+          {{/unless}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{#unless (eq this.position "bottom")}}
+    <div class="el-tabs__content">
+      {{yield (hash Pane=(component 'el-tab-pane' parent=this))}}
+    </div>
+  {{/unless}}
+</div>

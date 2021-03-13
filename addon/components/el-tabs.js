@@ -111,6 +111,8 @@ export default class ElTabsComponent extends Component {
 
   @tracked activeBarTransform = undefined;
 
+  @tracked panesCount = 0;
+
   /**
    * @event click
    * @param {ElTabPane} tab

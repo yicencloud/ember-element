@@ -6,6 +6,10 @@ export default class ElTabNavItemComponent extends Component {
   @argument
   pane = null;
 
+  willDestroy() {
+    this.pane.parent.panesCount--;
+  }
+
   @action
   handleClick(e) {
     this.args.click?.(this.pane, e);
@@ -23,7 +27,15 @@ export default class ElTabNavItemComponent extends Component {
   }
 
   @action
-  handleDidInsertOrUpdate(element) {
+  handleDidInsert(element) {
+    this.pane.parent.panesCount++;
+    if (this.pane.active) {
+      this._updateActiveBar(element);
+    }
+  }
+
+  @action
+  handleDidUpdate(element) {
     if (this.pane.active) {
       this._updateActiveBar(element);
     }
@@ -32,7 +44,7 @@ export default class ElTabNavItemComponent extends Component {
   _updateActiveBar(element) {
     let parent = this.pane.parent;
 
-    if (this.type) {
+    if (parent.type) {
       return;
     }
 

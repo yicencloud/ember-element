@@ -5,10 +5,11 @@
   aria-selected="true"
   class="el-tabs__item is-{{@pane.parent.position}} {{if @pane.active "is-active"}} {{if (or @pane.parent.closable @pane.parent.editable) "is-closable"}}"
   {{on 'click' (fn this.handleClick)}}
-  {{did-insert this.handleDidInsertOrUpdate}}
-  {{did-update this.handleDidInsertOrUpdate}}
+  {{did-insert this.handleDidInsert}}
+  {{did-update this.handleDidUpdate @pane.parent.panesCount @pane.parent.position}}
 >
   {{@pane.label}}
+  {{this.position}}
   {{#if (or @pane.parent.closable @pane.parent.editable)}}
     <span class="el-icon-close" {{on "click" (fn this.handleClose)}}></span>
   {{/if}}

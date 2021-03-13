@@ -6,7 +6,6 @@ Divide data collections which are related yet belong to different types.
 
 ## TODO
 
-* [ ] Fix navbar highlight issues when `position` of tabs changed;
 * [ ] Fix `card` type css issues.
 
 ## Basic usage
@@ -15,7 +14,7 @@ Basic and concise tabs.
 
 <DocsDemo @class="demo-block demo-tabs" as |demo|>
     <demo.example @name="tabs-basic-usage-demo.hbs">
-      <ElTabs @value={{this.basicUsageActiveName}} @click={{this.handleBasicUsageClick}} as |Tabs|>
+      <ElTabs @stretch={{true}} @value={{this.basicUsageActiveName}} @click={{this.handleBasicUsageClick}} as |Tabs|>
         <Tabs.Pane @label="User" @name="first">User</Tabs.Pane>
         <Tabs.Pane @label="Config" @name="second">Config</Tabs.Pane>
         <Tabs.Pane @label="Role" @name="third">Role</Tabs.Pane>

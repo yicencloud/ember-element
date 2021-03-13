@@ -3,7 +3,7 @@
   aria-controls="pane-{{@pane.name}}"
   role="tab"
   aria-selected="true"
-  class="el-tabs__item is-{{@pane.parent.position}} {{if @pane.active "is-active"}} {{if (or @pane.parent.closable @pane.parent.editable) "is-closable"}}"
+  class="el-tabs__item is-{{@pane.parent.position}} {{if @pane.disabled "is-disabled"}} {{if @pane.active "is-active"}} {{if (or @pane.parent.closable @pane.parent.editable) "is-closable"}}"
   {{on 'click' (fn this.handleClick)}}
   {{did-insert this.handleDidInsert}}
   {{did-update this.handleDidUpdate @pane.parent.panesCount @pane.parent.position}}

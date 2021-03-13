@@ -12,6 +12,10 @@ export default class ElTabNavItemComponent extends Component {
 
   @action
   handleClick(e) {
+    if (this.pane.disabled) {
+      return;
+    }
+
     this.args.click?.(this.pane, e);
 
     this._updateActiveBar(e.target);
@@ -19,6 +23,10 @@ export default class ElTabNavItemComponent extends Component {
 
   @action
   handleClose() {
+    if (this.pane.disabled) {
+      return;
+    }
+
     if (this.pane.parent.editable) {
       this.pane.parent.handleEdit(this.pane, "remove");
     } else if (this.pane.parent.closable) {

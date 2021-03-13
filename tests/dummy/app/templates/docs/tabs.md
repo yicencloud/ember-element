@@ -6,6 +6,9 @@ Divide data collections which are related yet belong to different types.
 
 ## TODO
 
+* [ ] Support `beforeLeave` of tabs;
+* [ ] Support default name strategy of tab pane;
+* [ ] Support `lazy` of tab pane;
 * [ ] Fix `card` type css issues.
 
 ## Basic usage
@@ -16,7 +19,7 @@ Basic and concise tabs.
     <demo.example @name="tabs-basic-usage-demo.hbs">
       <ElTabs @stretch={{true}} @value={{this.basicUsageActiveName}} @click={{this.handleBasicUsageClick}} as |Tabs|>
         <Tabs.Pane @label="User" @name="first">User</Tabs.Pane>
-        <Tabs.Pane @label="Config" @name="second">Config</Tabs.Pane>
+        <Tabs.Pane @label="Config" @name="second" @disabled={{true}}>Config</Tabs.Pane>
         <Tabs.Pane @label="Role" @name="third">Role</Tabs.Pane>
         <Tabs.Pane @label="Task" @name="fourth">Task</Tabs.Pane>
       </ElTabs>

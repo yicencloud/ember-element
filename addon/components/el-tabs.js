@@ -144,13 +144,22 @@ export default class ElTabsComponent extends Component {
   }
 
   @action
-  handleEdit(pane, act) {
-    this.args.edit?.(pane?.name, act);
+  handleRemove(name) {
+    this.args.remove?.(name);
   }
 
   @action
-  handleRemove(name) {
-    this.args.remove?.(name);
+  handleAdd() {
+    if (this.addable) {
+      this.args.add?.();
+    } else if (this.editable) {
+      this.args.edit?.(null, 'add');
+    }
+  }
+
+  @action
+  handleEdit(pane, act) {
+    this.args.edit?.(pane?.name, act);
   }
 
   @action

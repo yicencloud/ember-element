@@ -5,8 +5,8 @@
     </div>
   {{/if}}
   <div class="el-tabs__header is-{{this.position}}">
-    {{#if this.editable}}
-      <span class="el-tabs__new-tab" {{on "click" (fn this.handleEdit "" "add")}}>
+    {{#if (or this.addable this.editable)}}
+      <span class="el-tabs__new-tab" {{on "click" (fn this.handleAdd)}}>
         <ElIcon @icon="plus" />
       </span>
     {{/if}}
